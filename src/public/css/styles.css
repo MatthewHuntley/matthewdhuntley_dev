@@ -1,16 +1,76 @@
+/* Body
+======= */
 body {
-  padding-top: 50px;
+	font-size: 16px;
+  	padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+
+/*Fonts
+======= */
+@font-face {
+    font-family: 'BankGothicLight';
+    src: url('/fonts/BankGothicLight.eot');
+    src: url('/fonts/BankGothicLight.eot') format('embedded-opentype'),
+         url('../fonts/BankGothicLight.woff2') format('woff2'),
+         url('../fonts/BankGothicLight.woff') format('woff'),
+         url('../fonts/BankGothicLight.ttf') format('truetype'),
+         url('/fonts/BankGothicLight.svg#BankGothicLight') format('svg');
+}
+
+/* Navigation bar
+================= */
+.navbar {
+	background-color: rgba(219,209,173,1);
+	min-height: 100px;
 }
 
 .navbar-brand {
-    padding-top: 25px;
+    margin-top: 35px;
+}
+
+.navbar-toggle {
+	background-color: rgba(30,33,31,1);
+	margin-top: 50px;
+}
+
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(30,33,31,0.5);
+}
+
+.navbar-default .navbar-toggle:focus {
+    background-color: rgba(30,33,31,1);
+}
+
+/*.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: rgb(30,33,31);
+}*/
+
+.navbar-inverse .navbar-brand, 
+.navbar-inverse .navbar-nav > li > a {
+	color: rgb(30,33,31);
+	font-family: 'BankGothicLight';
+}
+
+span.initials {
+	font-size: 4em;
+}
+
+span.fullName {
+	font-size: 1em;
 }
 
 .navbar-nav > li > a {
     padding-top: 50px;
     padding-bottom: 0px;
 }
+
+/* Main page section -- all
+=========================== */
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+/* Main page section -- home
+============================ */
