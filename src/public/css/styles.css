@@ -24,27 +24,31 @@ body {
 	min-height: 100px;
 }
 
+.navbar .navbar-header {
+	min-height: 100px;
+}
+
+/*Uncomment below to center nav options in collapsed state*/
+/*.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}*/
+
+/* Navigation bar --> Brand (MDH - Matthew D Huntley)
+===================================================== */
 .navbar-brand {
     margin-top: 35px;
 }
 
-.navbar-toggle {
-	background-color: rgba(30,33,31,1);
-	margin-top: 50px;
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: rgb(181,120,67);
+  background-color: transparent;
 }
-
-.navbar-inverse .navbar-toggle:hover, 
-.navbar-inverse .navbar-toggle:focus {
-    background-color: rgba(30,33,31,0.5);
-}
-
-.navbar-default .navbar-toggle:focus {
-    background-color: rgba(30,33,31,1);
-}
-
-/*.navbar-inverse .navbar-toggle .icon-bar {
-    background-color: rgb(30,33,31);
-}*/
 
 .navbar-inverse .navbar-brand, 
 .navbar-inverse .navbar-nav > li > a {
@@ -52,17 +56,77 @@ body {
 	font-family: 'BankGothicLight';
 }
 
-span.initials {
+.navbar-inverse .navbar-brand span.initials {
 	font-size: 4em;
 }
 
-span.fullName {
+.navbar-inverse .navbar-brand span.initialsspan.fullName {
 	font-size: 1em;
 }
 
-.navbar-nav > li > a {
-    padding-top: 50px;
-    padding-bottom: 0px;
+/* Navigation bar --> Hamburger
+=============================== */
+.navbar-toggle {
+	background-color: rgba(30,33,31,1);
+	margin-top: 50px;
+}
+
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+    background-color: rgb(181,120,67);
+}
+
+/* Navigation Bar Collapsed
+=========================== */
+.navbar-inverse .navbar-collapse {
+	background-color: rgb(181,120,67);
+}
+
+/* Navigation Bar Collapsed --> List Items
+============================================ */
+.navbar-inverse .navbar-collapse .navbar-nav > li {
+	display: inline-block;
+	float: left;
+	padding: 0px;
+	text-align: center;
+}
+
+.navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-collapse .navbar-nav > li > a:focus {
+  color: rgba(255,255,255, 1);
+}
+
+.navbar-inverse .navbar-collapse > .active > a,
+.navbar-inverse .navbar-collapse > .active > a:hover,
+.navbar-inverse .navbar-collapse > .active > a:focus {
+  color: red;
+  background-color: #080808;
+}
+
+.navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
+	background-color: rgb(181,120,67);
+    border: none;
+    font-family: BankGothicLight;
+    color: rgb(30,33,31);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+    
+
+/* Navigation Bar (Collapsed and Non-Collapsed) --> List Items
+============================================================== */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: rgb(181,120,67);
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: rgb(181,120,67);
+  background-color: #080808;
 }
 
 /* Main page section -- all

@@ -9,16 +9,16 @@ $(document).ready(function () {
     });
 
     //START HERE!
-    $(".navbar-toggle").click(function() {
-    	var clickover = $(event.target);
-    	if(!($('.navbar-toggle').hasClass("navbar-toggle"))) {
-    		$(".navbar-toggle").addClass('blah');
-    		$(".blah").click(function() {
-		    	console.log("Hello");
-		    	$(".navbar-toggle").removeClass('blah');
-		    });
-    	}
-    });
+    // $(".navbar-toggle").click(function() {
+    // 	var clickover = $(event.target);
+    // 	if(!($('.navbar-toggle').hasClass("navbar-toggle"))) {
+    // 		$(".navbar-toggle").addClass('blah');
+    // 		$(".blah").click(function() {
+		  //   	console.log("Hello");
+		  //   	$(".navbar-toggle").removeClass('blah');
+		  //   });
+    // 	}
+    // });
 
 
 

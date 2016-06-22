@@ -17,7 +17,17 @@ nav.navbar.navbar-fixed-top.navbar-inverse(role='navigation')
               a(href='/film-reviews') Film Reviews
             |             
             li
-              a(href='/eat') Lifestyle
-            li
-               a(href='/travel') Placeholder
+              div.dropdown
+                button.button.btn-default.dropdown-toggle(type='button', id='dropdownMenu1', data-toggle='dropdown', aria-haspopup='false', aria-expanded='false') Lifestyle
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                    li
+                        a(href='/exercise') Exercise
+                    li
+                        a(href='/eat') Eat
+                    li
+                        a(href='/travel') Travel
+                    li
+                        a(href='play') Play
+
+
 
