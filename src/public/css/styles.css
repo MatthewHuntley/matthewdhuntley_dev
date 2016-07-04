@@ -46,8 +46,8 @@ body {
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: rgb(181,120,67);
-  background-color: transparent;
+	color: rgb(181,120,67);
+  	background-color: transparent;
 }
 
 .navbar-inverse .navbar-brand, 
@@ -80,6 +80,7 @@ body {
 =========================== */
 .navbar-inverse .navbar-collapse {
 	background-color: rgb(181,120,67);
+	font-size: 12px;
 }
 
 /* Navigation Bar Collapsed --> List Items
@@ -93,14 +94,14 @@ body {
 
 .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus {
-  color: rgba(255,255,255, 1);
+	color: rgba(255,255,255,1);
 }
 
 .navbar-inverse .navbar-collapse > .active > a,
 .navbar-inverse .navbar-collapse > .active > a:hover,
 .navbar-inverse .navbar-collapse > .active > a:focus {
-  color: red;
-  background-color: #080808;
+	color: red;
+  	background-color: #080808;
 }
 
 .navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
@@ -111,6 +112,39 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px;
+}
+
+/* Navigation Bar Dropdown ("Lifestyle")
+========================================*/
+.dropdown-menu {
+	color: rgb(30,33,31);
+	font-family: BankGothicLight;
+	font-size: 12px;
+}
+
+.open {
+	text-align: left;
+}
+
+.open > ul.dropdown-menu {
+	display: inline;
+}
+
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+	background-color: rgb(181,120,67);
+	color: rgba(255,255,255,1);
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	color: rgb(30,33,31);
 }
     
 

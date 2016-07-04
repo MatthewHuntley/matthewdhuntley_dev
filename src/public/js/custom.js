@@ -8,6 +8,11 @@ $(document).ready(function () {
         }
     });
 
+    //Disappear navbar more quickly/smoothly
+    $('.dropdown-menu').click(function() {
+       $('#navbar').hide();
+    });
+
     //START HERE!
     // $(".navbar-toggle").click(function() {
     // 	var clickover = $(event.target);

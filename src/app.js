@@ -7,7 +7,7 @@ var app = express();
 var views = [
 				'about',
 				'eat',
-				'exercies',
+				'exercise',
 				'film-reviews',
 				'play',
 				'travel'
