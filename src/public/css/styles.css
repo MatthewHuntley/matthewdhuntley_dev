@@ -54,14 +54,16 @@ body {
 .navbar-inverse .navbar-nav > li > a {
 	color: rgb(30,33,31);
 	font-family: 'BankGothicLight';
+	text-align: center;
 }
 
 .navbar-inverse .navbar-brand span.initials {
 	font-size: 4em;
 }
 
-.navbar-inverse .navbar-brand span.initialsspan.fullName {
+.navbar-inverse .navbar-brand span.fullName {
 	font-size: 1em;
+	text-transform: uppercase;
 }
 
 /* Navigation bar --> Hamburger
@@ -79,7 +81,7 @@ body {
 /* Navigation Bar Collapsed
 =========================== */
 .navbar-inverse .navbar-collapse {
-	background-color: rgb(181,120,67);
+	background-color: rgba(181,120,67,1);
 	font-size: 12px;
 }
 
@@ -90,6 +92,7 @@ body {
 	float: left;
 	padding: 0px;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
@@ -112,10 +115,15 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px;
+    text-transform: uppercase;
 }
 
 /* Navigation Bar Dropdown ("Lifestyle")
 ========================================*/
+.dropdown {
+	padding: 0px 15px;
+}
+
 .dropdown-menu {
 	color: rgb(30,33,31);
 	font-family: BankGothicLight;

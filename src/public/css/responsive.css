@@ -27,7 +27,22 @@ Max-Width: Refers to everything less than or equal to the amount given.
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
+        background-color: rgba(219,209,173,1);
+    }
 
+    .nav {
+        margin-top: 55px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        padding-bottom: 0px;
+    }
+
+    .dropdown {
+        margin-top: 5px;
+    }
 }
 
 /* Medium Devices, Desktops */
