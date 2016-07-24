@@ -27,11 +27,6 @@ Max-Width: Refers to everything less than or equal to the amount given.
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    .navbar-inverse .navbar-collapse,
-    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
-        background-color: rgba(219,209,173,1);
-    }
-
     .nav {
         margin-top: 55px;
     }
@@ -40,13 +35,55 @@ Max-Width: Refers to everything less than or equal to the amount given.
         padding-bottom: 0px;
     }
 
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
+        background-color: rgba(219,209,173,1);
+    }
+
+    .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus,
+    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button:hover {
+        color: rgb(181,120,67);
+    }
+
     .dropdown {
         margin-top: 5px;
+    }
+
+    .btn-default:active:hover,
+    .btn-default.active:hover,
+    .open > .dropdown-toggle.btn-default:hover,
+    .btn-default:active:focus,
+    .btn-default.active:focus,
+    .open > .dropdown-toggle.btn-default:focus,
+    .btn-default:active.focus,
+    .btn-default.active.focus,
+    .open > .dropdown-toggle.btn-default.focus {
+        background-color: rgba(219,209,173,1);
+        color: rgb(181,120,67);
+    }
+
+    .open > ul.dropdown-menu {
+        background-color: rgb(181,120,67);
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        background-color: rgb(181,120,67);
+        color: rgb(30,33,31);
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+        color: rgba(255,255,255,1);
     }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+    #followMe_top {
+        display: block;
+    }
 
 }
 

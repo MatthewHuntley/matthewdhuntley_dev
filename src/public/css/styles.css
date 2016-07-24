@@ -2,7 +2,7 @@
 ======= */
 body {
 	font-size: 16px;
-  	padding-top: 50px;
+  	text-transform: uppercase;
 }
 
 /*Fonts
@@ -16,6 +16,22 @@ body {
          url('../fonts/BankGothicLight.ttf') format('truetype'),
          url('/fonts/BankGothicLight.svg#BankGothicLight') format('svg');
 }
+
+/* Header ("Follow Me")
+======================= */
+#followMe_top {
+	background-color: rgba(219,209,173,1);
+	color: rgb(30,33,31);
+	display: none;
+	font-family: 'BankGothicLight';
+	font-size: 1em;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    width: 25%;
+    z-index: 2000;
+}
+
 
 /* Navigation bar
 ================= */
@@ -118,6 +134,10 @@ body {
     text-transform: uppercase;
 }
 
+.navbar-inverse .navbar-collapse .navbar-nav > li > div > button:hover {
+	color: rgba(255,255,255,1);
+}
+
 /* Navigation Bar Dropdown ("Lifestyle")
 ========================================*/
 .dropdown {
@@ -154,14 +174,13 @@ body {
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
 	color: rgb(30,33,31);
 }
-    
 
 /* Navigation Bar (Collapsed and Non-Collapsed) --> List Items
 ============================================================== */
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: rgb(181,120,67);
-  background-color: transparent;
+	background-color: transparent;
+  	color: rgb(181,120,67);
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -173,8 +192,12 @@ body {
 
 /* Main page section -- all
 =========================== */
+.container {
+
+}
+
 .starter-template {
-  padding: 40px 15px;
+  padding: 90px 15px;
   text-align: center;
 }
 
