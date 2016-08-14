@@ -158,6 +158,21 @@ body {
 	display: inline;
 }
 
+.open > ul.dropdown-menu li {
+	margin-left: 8px;
+	margin-bottom: 10px;
+}
+
+/* Adding bullet point to dropdown menu list item:;
+================================================= */
+.open > ul.dropdown-menu li:before
+{
+    content: "\25cf";
+    float: left;
+    margin-top: 3px;
+    margin-right: 4px
+}
+
 .btn-default:active:hover,
 .btn-default.active:hover,
 .open > .dropdown-toggle.btn-default:hover,
@@ -173,6 +188,9 @@ body {
 
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
 	color: rgb(30,33,31);
+	display: inline-block;
+	margin-left: 4px;
+	padding: 0;
 }
 
 /* Navigation Bar (Collapsed and Non-Collapsed) --> List Items

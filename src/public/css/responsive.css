@@ -23,6 +23,10 @@ Max-Width: Refers to everything less than or equal to the amount given.
     .dropdown-menu {
         font-size: 16px;
     }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        margin-top: 3px;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -69,9 +73,16 @@ Max-Width: Refers to everything less than or equal to the amount given.
         margin-top: 0;
     }
 
+    .open > ul.dropdown-menu li:before {
+        display: none;
+    }
+
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
         background-color: rgb(181,120,67);
         color: rgb(30,33,31);
+        display: block;
+        padding: 3px 20px;
+        margin: 0;
     }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
