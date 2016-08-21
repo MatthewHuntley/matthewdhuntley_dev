@@ -3,6 +3,7 @@
 body {
 	font-size: 16px;
   	text-transform: uppercase;
+  	color: rgba(30,33,31,1.0);
 }
 
 /*Fonts
@@ -21,7 +22,6 @@ body {
 ======================= */
 #followMe_top {
 	background-color: rgba(219,209,173,1);
-	color: rgb(30,33,31);
 	display: none;
 	font-family: 'BankGothicLight';
 	font-size: 1em;
@@ -32,6 +32,11 @@ body {
     z-index: 2000;
 }
 
+#followMe_top a { /*START HERE AFTER ADDING IMAGES INSTEAD OF FA ICONS*/
+	color: inherit;
+	font-size: 1.25em;
+	margin: 1px 5px 1px 5px;
+}
 
 /* Navigation bar
 ================= */
