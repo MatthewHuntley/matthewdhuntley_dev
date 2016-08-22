@@ -32,7 +32,7 @@ body {
     z-index: 2000;
 }
 
-#followMe_top a { /*START HERE AFTER ADDING IMAGES INSTEAD OF FA ICONS*/
+#followMe_top a { /*START HERE AFTER ADDING IMAGES INSTEAD OF FA ICONS -- THESE COMMENTS WILL BE DELETED.*/
 	color: inherit;
 	font-size: 1.25em;
 	margin: 1px 5px 1px 5px;
