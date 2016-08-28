@@ -24,7 +24,8 @@ body {
 	background-color: rgba(219,209,173,1);
 	display: none;
 	font-family: 'BankGothicLight';
-	font-size: 1em;
+	font-size: 1.3em;
+	padding-top: 30px;
     position: absolute;
     right: 0;
     text-align: left;
@@ -32,10 +33,25 @@ body {
     z-index: 2000;
 }
 
-#followMe_top a { /*START HERE AFTER ADDING IMAGES INSTEAD OF FA ICONS.*/
+#followMe_top a { 
 	color: inherit;
 	font-size: 1.25em;
-	margin: 1px 5px 1px 5px;
+	margin: 1px 10px 1px 0px;
+	text-align: left;
+}
+
+#followMe_top a.email { 
+	margin-top: 0px;
+}
+
+#followMe_top a img { 
+	vertical-align: top;
+	width: 24px;
+}
+
+#followMe_top a img.envelope { 
+	margin-top: -3px;
+	width: 30px;
 }
 
 /* Navigation bar
@@ -103,7 +119,7 @@ body {
 =========================== */
 .navbar-inverse .navbar-collapse {
 	background-color: rgba(181,120,67,1);
-	font-size: 12px;
+	font-size: 0.75em;
 }
 
 /* Navigation Bar Collapsed --> List Items
@@ -215,11 +231,7 @@ body {
 
 /* Main page section -- all
 =========================== */
-.container {
-
-}
-
-.starter-template {
+.container-fluid {
   padding: 90px 15px;
   text-align: center;
 }

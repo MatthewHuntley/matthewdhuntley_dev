@@ -17,11 +17,11 @@ Max-Width: Refers to everything less than or equal to the amount given.
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
     .navbar-inverse .navbar-collapse {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .dropdown-menu {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
@@ -100,7 +100,14 @@ Max-Width: Refers to everything less than or equal to the amount given.
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+    .navbar-inverse .navbar-brand span.initials {
+        font-size: 5em;
+    }
 
+    .navbar-inverse .navbar-brand span.fullName,
+    .navbar-inverse .navbar-collapse {
+        font-size: 1.25em;
+    }
 }
 
 /*==========  Non-Mobile First Method  ==========*/
