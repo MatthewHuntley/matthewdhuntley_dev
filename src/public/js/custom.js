@@ -13,6 +13,13 @@ $(document).ready(function () {
        $('#navbar').hide();
     });
 
+    //Add active state to nav bar options
+    $(".navbar").find("a").each(function () {
+      //If the url == window.location, add the class "active" to "this" (url)
+      this.href == window.location && $(this).addClass("active");
+    });
+    $(".active").parents(".navbar li").addClass("active-top");
+
     //START HERE!
     // $(".navbar-toggle").click(function() {
     // 	var clickover = $(event.target);
@@ -24,7 +31,6 @@ $(document).ready(function () {
 		  //   });
     // 	}
     // });
-
 
 
   //   if($(".navbar-collapse").hasClass("navbar-collapse collapse in")) {

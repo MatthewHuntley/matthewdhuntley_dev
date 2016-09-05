@@ -229,6 +229,14 @@ body {
   background-color: #080808;
 }
 
+/* Add active state to nav bar options
+====================================== */
+.navbar #navbar .nav li.active-top,
+.navbar #navbar .nav li.active-top button,
+.navbar #navbar .nav li a.active {
+	color: rgba(255, 255, 255, 1.0);
+}
+
 /* Main page section -- all
 =========================== */
 .container-fluid {
