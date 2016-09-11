@@ -237,12 +237,9 @@ body {
 	color: rgba(255, 255, 255, 1.0);
 }
 
-/* Main page section -- all
-=========================== */
+/* Below declarations apply to all pages
+======================================== */
 .container-fluid {
-  padding: 90px 15px;
+  padding: 100px 15px;
   text-align: center;
 }
-
-/* Main page section -- home
-============================ */
