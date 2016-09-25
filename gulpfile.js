@@ -1,15 +1,18 @@
 'use strict';
 
 var gulp = require('gulp'),
-	concat = require('gulp-concat');
-	//uglify = require('gulp-uglify'),
-	//rename = require('gulp-rename'),
+	concat = require('gulp-concat'),
+	cleanCSS = require('gulp-clean-css'),
+	cssMap = require('vinyl-map'),
+	uglify = require('gulp-uglify'),
+	rename = require('gulp-rename'),
 	  //sass = require('gulp-sass'),
- 	  //maps = require('gulp-sourcemaps'),
+ 	maps = require('gulp-sourcemaps');
  	   //del = require('del');
 
+//Map then concatenate all CSS files into one file: main.css:
 gulp.task('concatCSSFiles', function() {
-	gulp.src([	
+	return gulp.src([	
 		'src/public/css/bootstrap.css', 
 		'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
 		'http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic',
@@ -20,12 +23,25 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/styles.css',
 		'src/public/css/index.css',
 		'src/public/css/responsive.css'])
+	.pipe(maps.init())
 	.pipe(concat('main.css'))
+	.pipe(maps.write('./'))
 	.pipe(gulp.dest('src/public/css/'));
 });
 
+//Minify main.css:
+gulp.task('minifyCSSFile', ['concatCSSFiles'], function() {
+    return gulp.src('src/public/css/main.css')
+        //.pipe(maps.init())
+        .pipe(cleanCSS())
+        //.pipe(maps.write())
+        .pipe(rename('main.min.css'))
+		.pipe(gulp.dest('src/public/css/'));
+    });
+
+//Map then concatenate all JS files into one file: main.js
 gulp.task('concatJSFiles', function() {
-	gulp.src([	
+	return gulp.src([	
 		'src/public/js/jquery.js', 
 		'src/public/js/bootstrap.min.js', 
 		'src/public/js/jquery.easing.min.js', 
@@ -33,12 +49,43 @@ gulp.task('concatJSFiles', function() {
 		'src/public/js/wow.min.js',
 		'src/public/js/slick/slick.min.js',
 		'src/public/js/custom.js'])
+	.pipe(maps.init())
 	.pipe(concat('main.js'))
+	.pipe(maps.write('./'))
 	.pipe(gulp.dest('src/public/js/'));
 });
 
+//Minify main.js:
+gulp.task('minifyJSFile', 
+	['concatJSFiles'], 
+	function() {
+		return gulp.src(
+			[
+				'src/public/js/main.js'
+			]
+		)
+		.pipe(uglify())
+		.pipe(rename('main.min.js'))
+		.pipe(gulp.dest('src/public/js/'));
+	}
+);
+
+//watchFiles task utlizes inherent gulp.watch method to "watch" for when any specified files (e.g. any matching file in this directory 'scss/**/*.scss') change
+//NOTE: watchFiles task must be run first
+gulp.task('watchFiles', function() {
+	gulp.watch(['src/public/js/*.js'], ['minifyJSFile']);
+});
+
+gulp.task('build', ['minifyCSSFile', 'minifyJSFile']); /*START HERE! function() {
+	//START HERE BY SEEING IF THE DIST FOLDER CAN BE CUSTOMIZED TO HAVE A MORE TRADITIONAL STRUCTURE LIKE OUR GULP-BASICS PROJCT
+	//The below will return a folder we serve up to production (I believe; will know for sure after we watch next video:
+	https://teamtreehouse.com/library/gulp-basics/improving-your-gulp-task-pipelines/the-build-and-development-pipeline)
+	return gulp.src(['src/public/css/main.min.css', 'src/public/js/main.min.js'], { base: './'} )
+			.pipe(gulp.dest('dist/'));
+});*/
+
 //inherent 'gulp' task (named when 'default' is the name of the task) first runs the other gulp dependencies
 //Then run 'build' task automatically via inherent gulp.start() method (start saves us the trouble of typing out "gulp build", which is being deprecated)
-gulp.task('default', ['concatCSSFiles', 'concatJSFiles'], function() {
-	console.log("External files concatenated.");
+gulp.task('default', ['build'], function() {
+	console.log("External files concatenated and minified.");
 });

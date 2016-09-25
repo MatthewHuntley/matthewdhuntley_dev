@@ -176,3 +176,6 @@ $(document).ready(function () {
   //   });
 
 });
+
+var myVariable = myUndefinedVariable;
+//# sourceMappingURL=main.js.map
