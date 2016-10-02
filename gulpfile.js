@@ -29,18 +29,20 @@ gulp.task('concatCSSFiles', function() {
 	.pipe(gulp.dest('src/public/css/'));
 });
 
-//Minify main.css:
+//Map then minify main.css:
 gulp.task('minifyCSSFile', ['concatCSSFiles'], function() {
     return gulp.src('src/public/css/main.css')
-        //.pipe(maps.init())
+        .pipe(maps.init())
         .pipe(cleanCSS())
-        //.pipe(maps.write())
         .pipe(rename('main.min.css'))
+        .pipe(maps.write('./'))
 		.pipe(gulp.dest('src/public/css/'));
     });
 
-//Map then concatenate all JS files into one file: main.js
-gulp.task('concatJSFiles', function() {
+//Map then concatenate all JS files into one file: main.js; minify main.js into main.min.js:
+//NOTE: Using one task for both concat and minify operations (for now) because we found this approach works for mapping, as opposed to running them separately. 
+//Therefore, not utlizing 'minifyJSFile' task at this time (see below).
+gulp.task('mapConcatMinifyJSFiles', function() {
 	return gulp.src([	
 		'src/public/js/jquery.js', 
 		'src/public/js/bootstrap.min.js', 
@@ -51,21 +53,21 @@ gulp.task('concatJSFiles', function() {
 		'src/public/js/custom.js'])
 	.pipe(maps.init())
 	.pipe(concat('main.js'))
+	.pipe(gulp.dest('src/public/js/'))
+	.pipe(uglify())
+	.pipe(rename('main.min.js'))
 	.pipe(maps.write('./'))
 	.pipe(gulp.dest('src/public/js/'));
 });
 
-//Minify main.js:
-gulp.task('minifyJSFile', 
-	['concatJSFiles'], 
-	function() {
-		return gulp.src(
-			[
-				'src/public/js/main.js'
-			]
-		)
+//Map then minify main.js:
+//NOTE: Not currently utilizing this task due to mapping feature not working just yet.
+gulp.task('minifyJSFile', ['concatJSFiles'], function() {
+		return gulp.src('src/public/js/main.js')
+		.pipe(maps.init())
 		.pipe(uglify())
 		.pipe(rename('main.min.js'))
+		.pipe(maps.write('./'))
 		.pipe(gulp.dest('src/public/js/'));
 	}
 );
@@ -76,7 +78,7 @@ gulp.task('watchFiles', function() {
 	gulp.watch(['src/public/js/*.js'], ['minifyJSFile']);
 });
 
-gulp.task('build', ['minifyCSSFile', 'minifyJSFile']); /*START HERE! function() {
+gulp.task('build', ['minifyCSSFile', 'mapConcatMinifyJSFiles']); /*START HERE! function() {
 	//START HERE BY SEEING IF THE DIST FOLDER CAN BE CUSTOMIZED TO HAVE A MORE TRADITIONAL STRUCTURE LIKE OUR GULP-BASICS PROJCT
 	//The below will return a folder we serve up to production (I believe; will know for sure after we watch next video:
 	https://teamtreehouse.com/library/gulp-basics/improving-your-gulp-task-pipelines/the-build-and-development-pipeline)

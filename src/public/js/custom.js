@@ -58,4 +58,5 @@ $(document).ready(function () {
 
 });
 
-var myVariable = myUndefinedVariable;
+//Use only for testing:
+//var myVariable = myUndefinedVariable;
