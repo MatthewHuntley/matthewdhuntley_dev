@@ -7,8 +7,8 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
 	  //sass = require('gulp-sass'),
- 	maps = require('gulp-sourcemaps');
- 	   //del = require('del');
+ 	maps = require('gulp-sourcemaps'),
+ 	del = require('del');
 
 //Map then concatenate all CSS files into one file: main.css:
 gulp.task('concatCSSFiles', function() {
@@ -78,16 +78,23 @@ gulp.task('watchFiles', function() {
 	gulp.watch(['src/public/js/*.js'], ['minifyJSFile']);
 });
 
-gulp.task('build', ['minifyCSSFile', 'mapConcatMinifyJSFiles']); /*START HERE! function() {
-	//START HERE BY SEEING IF THE DIST FOLDER CAN BE CUSTOMIZED TO HAVE A MORE TRADITIONAL STRUCTURE LIKE OUR GULP-BASICS PROJCT
-	//The below will return a folder we serve up to production (I believe; will know for sure after we watch next video:
-	https://teamtreehouse.com/library/gulp-basics/improving-your-gulp-task-pipelines/the-build-and-development-pipeline)
-	return gulp.src(['src/public/css/main.min.css', 'src/public/js/main.min.js'], { base: './'} )
-			.pipe(gulp.dest('dist/'));
-});*/
+gulp.task('clean', function() {
+	del(['dist', 'src/public/css/main.css', 'src/public/css/main.css*', 'src/public/css/main.min.css*', 'src/public/js/main.js*', 'src/public/js/main.min.js*']);
+});
 
-//inherent 'gulp' task (named when 'default' is the name of the task) first runs the other gulp dependencies
-//Then run 'build' task automatically via inherent gulp.start() method (start saves us the trouble of typing out "gulp build", which is being deprecated)
-gulp.task('default', ['build'], function() {
-	console.log("External files concatenated and minified.");
+//Build application for development then create production folder:
+gulp.task('build', ['minifyCSSFile', 'mapConcatMinifyJSFiles'], 
+		//Build pipeline for production (i.e. compile finished app into single, distributable folder):
+		function() {
+			return gulp.src(['src/public/css/main.min.css', 'src/public/js/main.min.js', 'src/public/fonts/**', 'src/public/img/**', 'src/views/**', 'src/app.js'], { base: './'})
+			.pipe(gulp.dest('dist'));
+		}
+); 
+
+//Inherent 'gulp' task (named when 'default' is the name of the task) first runs the other gulp dependencies
+//Then run 'build' task automatically via inherent gulp.start() method (start saves us the trouble of typing out "gulp build", which is being deprecated
+gulp.task('default', ['clean'], function() {
+	gulp.start('build', function() {
+		console.log("External files concatenated and minified.");
+	});
 });
