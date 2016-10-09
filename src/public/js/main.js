@@ -177,5 +177,7 @@ $(document).ready(function () {
 
 });
 
+//alert("Testing");
+
 //Use only for testing:
 //var myVariable = myUndefinedVariable;

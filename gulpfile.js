@@ -20,6 +20,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/animate.min.css', 
 		'src/public/js/slick/slick.css', 
 		'src/public/js/slick/slick-theme.css',
+		'src/public/css/slider.css',
 		'src/public/css/styles.css',
 		'src/public/css/index.css',
 		'src/public/css/responsive.css'])
@@ -38,6 +39,21 @@ gulp.task('minifyCSSFile', ['concatCSSFiles'], function() {
         .pipe(maps.write('./'))
 		.pipe(gulp.dest('src/public/css/'));
     });
+
+//Concatenate JS Files into main.js (using this for our 'watchFiles' task [see below] for developement only for when custom.js changes)
+gulp.task('concatJSFiles', function() {
+	return gulp.src([	
+		'src/public/js/jquery.js', 
+		'src/public/js/bootstrap.min.js', 
+		'src/public/js/jquery.easing.min.js', 
+		'src/public/js/jquery.fittext.js', 
+		'src/public/js/wow.min.js',
+		'src/public/js/slick/slick.min.js',
+		'src/public/js/custom.js'])
+	.pipe(maps.init())
+	.pipe(concat('main.js'))
+	.pipe(gulp.dest('src/public/js/'));
+});
 
 //Map then concatenate all JS files into one file: main.js; minify main.js into main.min.js:
 //NOTE: Using one task for both concat and minify operations (for now) because we found this approach works for mapping, as opposed to running them separately. 
@@ -72,10 +88,15 @@ gulp.task('minifyJSFile', ['concatJSFiles'], function() {
 	}
 );
 
-//watchFiles task utlizes inherent gulp.watch method to "watch" for when any specified files (e.g. any matching file in this directory 'scss/**/*.scss') change
-//NOTE: watchFiles task must be run first
+//watchFiles task utlizes inherent gulp.watch method to "watch" when any specified files (e.g. any matching files in src/public/css/ or src/public/js change)
+//NOTE 1: The 'watchFiles' task or 'gulp serve' must be run first
+//NOTE 2: Utilize this during development
 gulp.task('watchFiles', function() {
-	gulp.watch(['src/public/js/*.js'], ['minifyJSFile']);
+	/*gulp.watch(['src/public/css/*.css'], ['concatCSSFiles']);
+	gulp.watch(['src/public/js/*.js'], ['concatJSFiles']);*/
+	gulp.watch(['src/public/css/*.css'], ['minifyCSSFile']);
+	gulp.watch(['src/public/js/custom.js'], ['mapConcatMinifyJSFiles']);
+	//NOTE: Running entire concat --> minify process on css files and js files when respective files (change since my application is so small); normally, 'watch' would only utilize concat (since minify takes a long time). This differs from Treehouse gulp-basics example because that application did not minify the CSS files and it never went into changes made to the main.js file, even though it was serving the corresponding .min.js file.
 });
 
 gulp.task('clean', function() {
@@ -83,6 +104,7 @@ gulp.task('clean', function() {
 });
 
 //Build application for development then create production folder:
+//NOTE: Only run this at the end of each development session and/or prior to production release
 gulp.task('build', ['minifyCSSFile', 'mapConcatMinifyJSFiles'], 
 		//Build pipeline for production (i.e. compile finished app into single, distributable folder):
 		function() {
@@ -90,6 +112,8 @@ gulp.task('build', ['minifyCSSFile', 'mapConcatMinifyJSFiles'],
 			.pipe(gulp.dest('dist'));
 		}
 ); 
+
+gulp.task('serve', ['watchFiles']);
 
 //Inherent 'gulp' task (named when 'default' is the name of the task) first runs the other gulp dependencies
 //Then run 'build' task automatically via inherent gulp.start() method (start saves us the trouble of typing out "gulp build", which is being deprecated

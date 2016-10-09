@@ -1,0 +1,25 @@
+/* Slick Carousel
+================= */
+.wrapper-carousel {
+	background-color: green;
+	min-height: 520px;
+	padding-top: 30px;
+}
+
+.slick-slide {
+	min-height: 520px;
+}
+
+.slide-link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 400px;
+}
+
+#slide-latest-cooking-recipe {
+	background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
+	background-size: contain;
+	height: auto;
+	width: 100%;
+}

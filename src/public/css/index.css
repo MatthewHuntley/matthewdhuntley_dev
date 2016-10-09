@@ -1,25 +1,6 @@
 /* Home/Index Page CSS
 =============================== */
 
-/* Slick Carousel
-================= */
-.wrapper-carousel {
-	background-color: blue;
-	min-height: 520px;
-	padding-top: 30px;
-}
-
-.slick-slide {
-	min-height: 520px;
-}
-
-.slide-link {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 400px;
-}
-
 /*==================================================
             Bootstrap 3 Media Queries             
 ==================================================*/
