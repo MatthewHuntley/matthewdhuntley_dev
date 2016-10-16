@@ -1,0 +1,156 @@
+.wrapper-nav {
+  position: relative;
+}
+.navbar {
+  background-color: #dbd1ad;
+  min-height: 100px;
+}
+.navbar .navbar-header {
+  min-height: 100px;
+}
+/*Uncomment below to center nav options in collapsed state*/
+/*.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}*/
+/* Navigation bar --> Brand (MDH - Matthew D Huntley)
+===================================================== */
+.navbar-brand {
+  margin-top: 35px;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #b57843;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  color: #1e211f;
+  font-family: 'BankGothicLight';
+  text-align: center;
+}
+.navbar-inverse .navbar-brand span.initials {
+  font-size: 4em;
+}
+.navbar-inverse .navbar-brand span.fullName {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+/* Navigation bar --> Hamburger
+=============================== */
+.navbar-toggle {
+  background-color: #1e211f;
+  margin-top: 50px;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #b57843;
+}
+/* Navigation Bar Collapsed
+=========================== */
+.navbar-inverse .navbar-collapse {
+  background-color: #b57843;
+  font-size: 0.75em;
+}
+/* Navigation Bar Collapsed --> List Items
+============================================ */
+.navbar-inverse .navbar-collapse .navbar-nav > li {
+  display: inline-block;
+  float: left;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-collapse .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-collapse > .active > a,
+.navbar-inverse .navbar-collapse > .active > a:hover,
+.navbar-inverse .navbar-collapse > .active > a:focus {
+  color: red;
+  background-color: #080808;
+}
+.navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
+  background-color: #b57843;
+  border: none;
+  font-family: BankGothicLight;
+  color: #1e211f;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.navbar-inverse .navbar-collapse .navbar-nav > li > div > button:hover {
+  color: #ffffff;
+}
+/* Navigation Bar Dropdown ("Lifestyle")
+========================================*/
+.dropdown {
+  padding: 0px 15px;
+}
+.dropdown-menu {
+  color: #1e211f;
+  font-family: BankGothicLight;
+  font-size: 12px;
+}
+.open {
+  text-align: left;
+}
+.open > ul.dropdown-menu {
+  display: inline;
+}
+.open > ul.dropdown-menu li {
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+/* Adding bullet point to dropdown menu list item:;
+================================================= */
+.open > ul.dropdown-menu li:before {
+  content: "\25cf";
+  float: left;
+  margin-top: 3px;
+  margin-right: 4px;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+  background-color: #b57843;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  color: #1e211f;
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0;
+}
+/* Navigation Bar (Collapsed and Non-Collapsed) --> List Items
+============================================================== */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #b57843;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #b57843;
+  background-color: #080808;
+}
+/* Add active state to nav bar options
+====================================== */
+.navbar #navbar .nav li.active-top,
+.navbar #navbar .nav li.active-top button,
+.navbar #navbar .nav li a.active {
+  color: #ffffff;
+}

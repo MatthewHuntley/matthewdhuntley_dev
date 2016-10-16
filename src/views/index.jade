@@ -1,8 +1,10 @@
 extends ./layout.jade
 
 block content
-    div.container-fluid
+    div.container-fluid.clearfix
         div.wrapper-home
+          include ./partials/_header.jade
+          include ./partials/_nav.jade
           include ./includes/slider.jade
           //div.wrapper-carousel.hidden-md-up
             #slide-latest-film-review Latest Film Review
@@ -15,7 +17,7 @@ block content
         h1 My Home Page
             |         
             p.lead
-              | Use this document as a way to quickly start any new project.
+              | Use thi document as a way to quickly start any new project.
               br
               |  All you get is this text and a mostly barebones HTML document.
         |     
