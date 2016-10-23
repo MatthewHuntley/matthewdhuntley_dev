@@ -2,23 +2,16 @@ extends ./layout.jade
 
 block content
     div.container-fluid.clearfix
-        div.wrapper-home
-          include ./partials/_header.jade
-          include ./partials/_nav.jade
-          include ./includes/slider.jade
-          //div.wrapper-carousel.hidden-md-up
-            #slide-latest-film-review Latest Film Review
-              a(class='slide-link' id='slide-link-latest-film-review' href='/film-reviews') Read More!
-            #slide-weekend-exercise-challenge Weekend Exercise Challenge
-              a(class='slide-link' id='slide-link-latest-film-review' href='/exercise') Read More!
-            div Newest Cooking Experiment
-            div Latest Travel Photos
-            div Weekend Play
-        h1 My Home Page
-            |         
-            p.lead
-              | Use thi document as a way to quickly start any new project.
-              br
-              |  All you get is this text and a mostly barebones HTML document.
-        |     
-        h1 Rajasegar
+      include ./partials/_header.jade
+      include ./partials/_nav.jade
+      include ./includes/slider.jade
+      //include ./includes/wrapper-index.jade
+      //h1 My Home Page
+          |         
+          p.lead
+            | Use thi document as a way to quickly start any new project.
+            br
+            |  All you get is this text and a mostly barebones HTML document.
+      //|     
+      //h1 Rajasegar
+      //include ./includes/wrapper-index.jade

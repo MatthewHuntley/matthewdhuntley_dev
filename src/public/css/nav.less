@@ -4,7 +4,12 @@
 
 .navbar {
 	background-color: rgba(219,209,173,1);
+	margin-bottom: 0;
 	min-height: 100px;
+}
+
+.navbar-inverse {
+	border: none;
 }
 
 .navbar .navbar-header {
@@ -71,8 +76,8 @@
 /* Navigation Bar Collapsed --> List Items
 ============================================ */
 .navbar-inverse .navbar-collapse .navbar-nav > li {
-	display: inline-block;
-	float: left;
+	display: block;
+	float: none;
 	padding: 0px;
 	text-align: center;
 	text-transform: uppercase;
@@ -118,22 +123,23 @@
 }
 
 .open {
-	text-align: left;
+	text-align: center;
 }
 
 .open > ul.dropdown-menu {
 	display: inline;
+	text-align: center;
 }
 
 .open > ul.dropdown-menu li {
-	margin-left: 8px;
+	margin-left: 38%;
 	margin-bottom: 10px;
+	text-align: left;
 }
 
 /* Adding bullet point to dropdown menu list item:;
 ================================================= */
-.open > ul.dropdown-menu li:before
-{
+.open > ul.dropdown-menu li:before {
     content: "\25cf";
     float: left;
     margin-top: 3px;
@@ -181,4 +187,158 @@
 .navbar #navbar .nav li.active-top button,
 .navbar #navbar .nav li a.active {
 	color: rgba(255, 255, 255, 1.0);
+}
+
+/*
+Min-Width: Refers to everything greater than or equal to the amount given.
+Max-Width: Refers to everything less than or equal to the amount given.
+*/
+
+/*==================================================
+            Bootstrap 3 Media Queries             
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+@media only screen and (min-width : 400px) {
+    .navbar-inverse .navbar-collapse .navbar-nav > li {
+    	display: inline-block;
+    	float: left;
+    }
+
+    .open > ul.dropdown-menu {
+		text-align: left;
+	}
+
+	.open > ul.dropdown-menu li {
+		margin-left: 8px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    .navbar-inverse .navbar-collapse {
+        font-size: 1em;
+    }
+
+    .dropdown-menu {
+        font-size: 1em;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        margin-top: 3px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .nav {
+        margin-top: 55px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        padding-bottom: 0px;
+    }
+
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
+        background-color: rgba(219,209,173,1);
+    }
+
+    .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus,
+    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button:hover {
+        color: rgb(181,120,67);
+    }
+
+    .dropdown {
+        margin-top: 5px;
+    }
+
+    .btn-default:active:hover,
+    .btn-default.active:hover,
+    .open > .dropdown-toggle.btn-default:hover,
+    .btn-default:active:focus,
+    .btn-default.active:focus,
+    .open > .dropdown-toggle.btn-default:focus,
+    .btn-default:active.focus,
+    .btn-default.active.focus,
+    .open > .dropdown-toggle.btn-default.focus {
+        background-color: rgba(219,209,173,1);
+        color: rgb(181,120,67);
+    }
+
+    .open > ul.dropdown-menu {
+        background-color: rgb(181,120,67);
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .open > ul.dropdown-menu li:before {
+        display: none;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        background-color: rgb(181,120,67);
+        color: rgb(30,33,31);
+        display: block;
+        padding: 3px 20px;
+        margin: 0;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+        color: rgba(255,255,255,1);
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #followMe_top {
+        display: block;
+    }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .navbar-inverse .navbar-brand span.initials {
+        font-size: 5em;
+    }
+
+    .navbar-inverse .navbar-brand span.fullName,
+    .navbar-inverse .navbar-collapse {
+        font-size: 1.25em;
+    }
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
 }
