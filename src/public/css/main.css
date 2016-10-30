@@ -7403,28 +7403,50 @@ Max-Width: Refers to everything less than or equal to the amount given.
 ================= */
 .wrapper-carousel {
 	position: relative;
-	background-color: yellow;
+	background-color: rgba(255, 255, 255, 1.0);
 	min-height: 520px;
 	padding-top: 30px;
 }
 
+/*Inherent class from slick.css representing each slide; exists on same level as author-implemented id*/
 .slick-slide {
 	min-height: 520px;
-}
-
-.slide-link {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 400px;
-}
-
-#slide-latest-film-review {
-	background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
-	background-size: contain;
-	height: auto;
 	width: 100%;
 }
+	.slide-title {
+		font-family: 'BankGothicLight';
+		font-weight: 500;
+		text-align: left;
+	}
+
+	.slide-link {
+		margin-bottom: 15px;
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+
+	.slide-link img {
+		height: auto;
+		width: 100%
+	}
+
+	.slide-copy {
+		max-height: 250px;
+		overflow: hidden;
+		text-align: left;
+	}
+
+	.read-more {
+		margin-top: 15px;
+		text-align: right;
+	}
+
+	/*#slide-latest-film-review .slide-image {
+		background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
+		background-size: contain;
+		min-height: 520px;
+	}*/
 
 #slide-latest-cooking-recipe {
 	background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
@@ -7436,8 +7458,8 @@ Max-Width: Refers to everything less than or equal to the amount given.
 ======= */
 body {
 	font-size: 16px;
-  	text-transform: uppercase;
-  	color: rgba(30,33,31,1.0);
+	text-transform: uppercase;
+	color: rgba(30,33,31,1.0);
 }
 
 /*Fonts
