@@ -25,6 +25,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/slider.css',
 		'src/public/css/styles.css',
 		'src/public/css/index.css',
+		'src/public/css/footer.css',
 		'src/public/css/responsive.css'])
 	.pipe(maps.init())
 	.pipe(concat('main.css'))

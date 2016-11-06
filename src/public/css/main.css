@@ -6807,21 +6807,31 @@ Copyright (c) 2015 Daniel Eden
 	margin-top: -3px;
 	width: 30px;
 }
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
 .wrapper-nav {
   position: relative;
 }
+
 .navbar {
   background-color: #dbd1ad;
   margin-bottom: 0;
   min-height: 100px;
 }
+
 .navbar-inverse {
   border: none;
 }
+
 .navbar .navbar-header {
   min-height: 100px;
 }
-/*Uncomment below to center nav options in collapsed state*/
+
+/**
+ * Uncomment below to center nav options in collapsed state
+ */
 /*.navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -6830,47 +6840,61 @@ Copyright (c) 2015 Daniel Eden
 .navbar .navbar-collapse {
     text-align: center;
 }*/
-/* Navigation bar --> Brand (MDH - Matthew D Huntley)
-===================================================== */
+
+
+/**
+ * Navigation bar --> Brand (MDH - Matthew D Huntley)
+ */
 .navbar-brand {
   margin-top: 35px;
 }
+
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
   color: #b57843;
   background-color: transparent;
 }
+
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav > li > a {
   color: #1e211f;
   font-family: 'BankGothicLight';
   text-align: center;
 }
+
 .navbar-inverse .navbar-brand span.initials {
   font-size: 4em;
 }
+
 .navbar-inverse .navbar-brand span.fullName {
   font-size: 1em;
   text-transform: uppercase;
 }
-/* Navigation bar --> Hamburger
-=============================== */
+
+/**
+ * Navigation bar --> Hamburger
+ */
 .navbar-toggle {
   background-color: #1e211f;
   margin-top: 50px;
 }
+
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
   background-color: #b57843;
 }
-/* Navigation Bar Collapsed
-=========================== */
+
+/**
+ * Navigation Bar Collapsed
+ */
 .navbar-inverse .navbar-collapse {
   background-color: #b57843;
   font-size: 0.75em;
 }
-/* Navigation Bar Collapsed --> List Items
-============================================ */
+
+/**
+ * Navigation Bar Collapsed --> List Items
+ */
 .navbar-inverse .navbar-collapse .navbar-nav > li {
   display: block;
   float: none;
@@ -6878,16 +6902,19 @@ Copyright (c) 2015 Daniel Eden
   text-align: center;
   text-transform: uppercase;
 }
+
 .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus {
   color: #ffffff;
 }
+
 .navbar-inverse .navbar-collapse > .active > a,
 .navbar-inverse .navbar-collapse > .active > a:hover,
 .navbar-inverse .navbar-collapse > .active > a:focus {
   color: red;
   background-color: #080808;
 }
+
 .navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
   background-color: #b57843;
   border: none;
@@ -6898,11 +6925,14 @@ Copyright (c) 2015 Daniel Eden
   line-height: 20px;
   text-transform: uppercase;
 }
+
 .navbar-inverse .navbar-collapse .navbar-nav > li > div > button:hover {
   color: #ffffff;
 }
-/* Navigation Bar Dropdown ("Lifestyle")
-========================================*/
+
+/**
+ * Navigation Bar Dropdown ("Lifestyle")
+ */
 .dropdown {
   padding: 0px 15px;
 }
@@ -6923,14 +6953,17 @@ Copyright (c) 2015 Daniel Eden
   margin-bottom: 10px;
   text-align: left;
 }
-/* Adding bullet point to dropdown menu list item:;
-================================================= */
+
+/**
+ * Adding bullet point to dropdown menu list item:
+ */
 .open > ul.dropdown-menu li:before {
   content: "\25cf";
   float: left;
   margin-top: 3px;
   margin-right: 4px;
 }
+
 .btn-default:active:hover,
 .btn-default.active:hover,
 .open > .dropdown-toggle.btn-default:hover,
@@ -6943,41 +6976,43 @@ Copyright (c) 2015 Daniel Eden
   background-color: #b57843;
   color: #ffffff;
 }
+
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
   color: #1e211f;
   display: inline-block;
   margin-left: 4px;
   padding: 0;
 }
-/* Navigation Bar (Collapsed and Non-Collapsed) --> List Items
-============================================================== */
+
+/**
+ * Navigation Bar (Collapsed and Non-Collapsed) --> List Items
+*/
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   background-color: transparent;
   color: #b57843;
 }
+
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #b57843;
   background-color: #080808;
 }
-/* Add active state to nav bar options
-====================================== */
+
+/**
+ * Add active state to nav bar options
+*/
 .navbar #navbar .nav li.active-top,
 .navbar #navbar .nav li.active-top button,
 .navbar #navbar .nav li a.active {
   color: #ffffff;
 }
-/*
-Min-Width: Refers to everything greater than or equal to the amount given.
-Max-Width: Refers to everything less than or equal to the amount given.
-*/
-/*==================================================
-            Bootstrap 3 Media Queries             
-==================================================*/
-/*==========  Mobile First Method  ==========*/
-/* Custom, iPhone Retina */
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
 @media only screen and (min-width: 400px) {
   .navbar-inverse .navbar-collapse .navbar-nav > li {
     display: inline-block;
@@ -6990,7 +7025,8 @@ Max-Width: Refers to everything less than or equal to the amount given.
     margin-left: 8px;
   }
 }
-/* Extra Small Devices, Phones */
+
+
 @media only screen and (min-width: 480px) {
   .navbar-inverse .navbar-collapse {
     font-size: 1em;
@@ -7002,7 +7038,7 @@ Max-Width: Refers to everything less than or equal to the amount given.
     margin-top: 3px;
   }
 }
-/* Small Devices, Tablets */
+
 @media only screen and (min-width: 768px) {
   .nav {
     margin-top: 55px;
@@ -7053,13 +7089,13 @@ Max-Width: Refers to everything less than or equal to the amount given.
     color: #ffffff;
   }
 }
-/* Medium Devices, Desktops */
+
 @media only screen and (min-width: 992px) {
   #followMe_top {
     display: block;
   }
 }
-/* Large Devices, Wide Screens */
+
 @media only screen and (min-width: 1200px) {
   .navbar-inverse .navbar-brand span.initials {
     font-size: 5em;
@@ -7069,12 +7105,6 @@ Max-Width: Refers to everything less than or equal to the amount given.
     font-size: 1.25em;
   }
 }
-/*==========  Non-Mobile First Method  ==========*/
-/* Large Devices, Wide Screens */
-/* Medium Devices, Desktops */
-/* Small Devices, Tablets */
-/* Extra Small Devices, Phones */
-/* Custom, iPhone Retina */
 
 /* Slider */
 .slick-slider
@@ -7399,54 +7429,94 @@ Max-Width: Refers to everything less than or equal to the amount given.
     color: black;
 }
 
-/* Slick Carousel
-================= */
+/*------------------------------------*\
+  #SLICK CAROUSEL
+\*------------------------------------*/
+
 .wrapper-carousel {
 	position: relative;
-	background-color: rgba(255, 255, 255, 1.0);
 	min-height: 520px;
-	padding-top: 30px;
+	padding-top: 10px;
 }
 
-/*Inherent class from slick.css representing each slide; exists on same level as author-implemented id*/
+.wrapper-carousel .container {
+	background-color: rgba(255, 255, 255, 1.0);
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);	
+	margin: 10px;
+	padding-top: 10px;
+}
+
+/**
+ * slick-theme.css overrides
+ */
+ .slick-arrow,
+ .slick-next, 
+ .slick-prev {
+ 	display: none !important;
+ }
+
+ .slick-dots li button {
+
+ }
+
+ .slick-dots li button::before {
+	color: rgba(255, 255, 255, 1.0);
+	font-size: 50px;
+	opacity: 1.0;
+}
+
+.slick-dots li.slick-active button::before {
+	color: #b57843;
+	opacity: 1.0;
+}
+
+/**
+ * Inherent class from slick.css representing each slide; exists on same level as author-implemented id
+ */
 .slick-slide {
 	min-height: 520px;
 	width: 100%;
 }
-	.slide-title {
-		font-family: 'BankGothicLight';
-		font-weight: 500;
-		text-align: left;
-	}
 
-	.slide-link {
-		margin-bottom: 15px;
-	    display: block;
-	    margin-left: auto;
-	    margin-right: auto;
-	}
+/**
+ * Author-implemented selectors
+ */
+.slide-title {
+	font-family: 'BankGothicLight';
+	font-weight: 500;
+	text-align: left;
+}
 
-	.slide-link img {
-		height: auto;
-		width: 100%
-	}
+.slide-link {
+	margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-	.slide-copy {
-		max-height: 250px;
-		overflow: hidden;
-		text-align: left;
-	}
+.slide-link img {
+	height: auto;
+	width: 100%
+}
 
-	.read-more {
-		margin-top: 15px;
-		text-align: right;
-	}
+.slide-copy {
+	max-height: 250px;
+	overflow: hidden;
+	text-align: left;
+}
 
-	/*#slide-latest-film-review .slide-image {
-		background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
-		background-size: contain;
-		min-height: 520px;
-	}*/
+.read-more {
+	margin-top: 15px;
+	text-align: right;
+}
+
+/*#slide-latest-film-review .slide-image {
+	background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
+	background-size: contain;
+	min-height: 520px;
+}*/
 
 #slide-latest-cooking-recipe {
 	background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
@@ -7454,31 +7524,77 @@ Max-Width: Refers to everything less than or equal to the amount given.
 	height: auto;
 	width: 100%;
 }
-/* Body
-======= */
-body {
-	font-size: 16px;
-	text-transform: uppercase;
-	color: rgba(30,33,31,1.0);
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }
 
 /*Fonts
 ======= */
 @font-face {
     font-family: 'BankGothicLight';
-    src: url('/fonts/BankGothicLight.eot');
-    src: url('/fonts/BankGothicLight.eot') format('embedded-opentype'),
+    src: url('../fonts/BankGothicLight.eot');
+    src: url('../fonts/BankGothicLight.eot') format('embedded-opentype'),
          url('../fonts/BankGothicLight.woff2') format('woff2'),
          url('../fonts/BankGothicLight.woff') format('woff'),
          url('../fonts/BankGothicLight.ttf') format('truetype'),
-         url('/fonts/BankGothicLight.svg#BankGothicLight') format('svg');
+         url('../fonts/BankGothicLight.svg#BankGothicLight') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/MyriadProRegular.eot');
+    src: url('../fonts/MyriadProRegular.eot') format('embedded-opentype'),
+         url('../fonts/MyriadProRegular.woff2') format('woff2'),
+         url('../fonts/MyriadProRegular.woff') format('woff'),
+         url('../fonts/MyriadProRegular.ttf') format('truetype'),
+         url('../fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProIt';
+    src: url('fonts/MyriadProIt.eot');
+    src: url('fonts/MyriadProIt.eot') format('embedded-opentype'),
+         url('fonts/MyriadProIt.woff2') format('woff2'),
+         url('fonts/MyriadProIt.woff') format('woff'),
+         url('fonts/MyriadProIt.ttf') format('truetype'),
+         url('fonts/MyriadProIt.svg#MyriadProIt') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('fonts/MyriadProBold.eot');
+    src: url('fonts/MyriadProBold.eot') format('embedded-opentype'),
+         url('fonts/MyriadProBold.woff2') format('woff2'),
+         url('fonts/MyriadProBold.woff') format('woff'),
+         url('fonts/MyriadProBold.ttf') format('truetype'),
+         url('fonts/MyriadProBold.svg#MyriadProBold') format('svg');
+}
+
+/* Body
+======= */
+body {
+  background-color: rgba(39, 78, 122, 1.0);
+  color: rgba(30,33,31,1.0);
+  font-family: 'MyriadProRegular';
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 /* Below declarations apply to all pages
 ======================================== */
 .container-fluid {
   /*padding: 100px 15px;*/
-  background-color: rgba(219,209,173,1);
+  background-color: rgba(39, 78, 122, 1.0);
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -7550,6 +7666,29 @@ body {
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
     
+}
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.wrapper-footer {
+  background-color: green;
+  position: relative;
+}
+
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }
 
 

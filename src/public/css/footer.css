@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.wrapper-footer {
+  background-color: green;
+  position: relative;
+}
+
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+

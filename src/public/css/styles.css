@@ -1,28 +1,61 @@
-/* Body
-======= */
-body {
-	font-size: 16px;
-	text-transform: uppercase;
-	color: rgba(30,33,31,1.0);
-}
-
 /*Fonts
 ======= */
 @font-face {
     font-family: 'BankGothicLight';
-    src: url('/fonts/BankGothicLight.eot');
-    src: url('/fonts/BankGothicLight.eot') format('embedded-opentype'),
+    src: url('../fonts/BankGothicLight.eot');
+    src: url('../fonts/BankGothicLight.eot') format('embedded-opentype'),
          url('../fonts/BankGothicLight.woff2') format('woff2'),
          url('../fonts/BankGothicLight.woff') format('woff'),
          url('../fonts/BankGothicLight.ttf') format('truetype'),
-         url('/fonts/BankGothicLight.svg#BankGothicLight') format('svg');
+         url('../fonts/BankGothicLight.svg#BankGothicLight') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/MyriadProRegular.eot');
+    src: url('../fonts/MyriadProRegular.eot') format('embedded-opentype'),
+         url('../fonts/MyriadProRegular.woff2') format('woff2'),
+         url('../fonts/MyriadProRegular.woff') format('woff'),
+         url('../fonts/MyriadProRegular.ttf') format('truetype'),
+         url('../fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProIt';
+    src: url('fonts/MyriadProIt.eot');
+    src: url('fonts/MyriadProIt.eot') format('embedded-opentype'),
+         url('fonts/MyriadProIt.woff2') format('woff2'),
+         url('fonts/MyriadProIt.woff') format('woff'),
+         url('fonts/MyriadProIt.ttf') format('truetype'),
+         url('fonts/MyriadProIt.svg#MyriadProIt') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('fonts/MyriadProBold.eot');
+    src: url('fonts/MyriadProBold.eot') format('embedded-opentype'),
+         url('fonts/MyriadProBold.woff2') format('woff2'),
+         url('fonts/MyriadProBold.woff') format('woff'),
+         url('fonts/MyriadProBold.ttf') format('truetype'),
+         url('fonts/MyriadProBold.svg#MyriadProBold') format('svg');
+}
+
+/* Body
+======= */
+body {
+  background-color: rgba(39, 78, 122, 1.0);
+  color: rgba(30,33,31,1.0);
+  font-family: 'MyriadProRegular';
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 /* Below declarations apply to all pages
 ======================================== */
 .container-fluid {
   /*padding: 100px 15px;*/
-  background-color: rgba(219,209,173,1);
+  background-color: rgba(39, 78, 122, 1.0);
   padding-left: 0;
   padding-right: 0;
   text-align: center;
