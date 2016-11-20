@@ -1,5 +1,10 @@
-/*Fonts
-======= */
+/*------------------------------------*\
+  #MAIN CSS FILE
+\*------------------------------------*/
+
+/**
+ * Fonts
+ */
 @font-face {
     font-family: 'BankGothicLight';
     src: url('../fonts/BankGothicLight.eot');
@@ -40,8 +45,9 @@
          url('fonts/MyriadProBold.svg#MyriadProBold') format('svg');
 }
 
-/* Body
-======= */
+/**
+ * Body
+ */
 body {
   background-color: rgba(39, 78, 122, 1.0);
   color: rgba(30,33,31,1.0);
@@ -51,11 +57,13 @@ body {
   text-transform: uppercase;
 }
 
-/* Below declarations apply to all pages
-======================================== */
+/**
+ * Below declarations apply to all pages
+ */
 .container-fluid {
   /*padding: 100px 15px;*/
   background-color: rgba(39, 78, 122, 1.0);
+  min-height: 100%;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -66,3 +74,7 @@ body {
     display: block;
     clear: both;
 } 
+
+.content {
+    padding-bottom: 3em;
+}

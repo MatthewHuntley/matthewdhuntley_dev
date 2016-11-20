@@ -3,10 +3,50 @@
 \*------------------------------------*/
 
 .wrapper-footer {
-  background-color: green;
+  background-color: rgba(30, 33, 31, 1);
+  color: rgba(218, 208, 171, 1);
+  font-family: 'BankGothicLight';
+  padding: 15px 0;
   position: relative;
+  text-transform: uppercase;
 }
 
+#copyright {
+  font-size: 0.85em;
+  margin-bottom: 10px;
+  padding: 15px 0;
+}
+
+#copyright span {
+  display: block;
+}
+
+#followMe-footer {
+  font-size: 1.3em;
+  padding-top: 15px 0;
+  z-index: 2000;
+}
+
+#followMe-footer a { 
+  color: inherit;
+  font-size: 1.25em;
+  margin: 1px 10px 1px 0px;
+  text-align: left;
+}
+
+#followMe-footer a.email { 
+  margin-top: 0px;
+}
+
+#followMe-footer a img { 
+  vertical-align: top;
+  width: 24px;
+}
+
+#followMe-footer a img.envelope { 
+  margin-top: -3px;
+  width: 30px;
+}
 
 /*------------------------------------*\
   #MEDIA QUERIES
@@ -19,4 +59,3 @@
 
 @media (min-width: 1200px) {
 }
-

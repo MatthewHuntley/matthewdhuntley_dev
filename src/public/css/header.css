@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
 .wrapper-header {
 	position: relative;
 }
@@ -34,4 +38,17 @@
 #followMe_top a img.envelope { 
 	margin-top: -3px;
 	width: 30px;
+}
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }
