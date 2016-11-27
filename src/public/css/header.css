@@ -6,6 +6,14 @@
 	position: relative;
 }
 
+.wrapper-header .container-fluid {
+  background-color: rgba(39, 78, 122, 1.0);
+  min-height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
 #followMe_top {
 	background-color: rgba(219,209,173,1);
 	display: none;
