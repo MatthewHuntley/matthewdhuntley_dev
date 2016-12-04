@@ -6850,6 +6850,7 @@ Copyright (c) 2015 Daniel Eden
 
 .navbar {
   background-color: #dbd1ad;
+  border-radius: 0;
   margin-bottom: 0;
   min-height: 100px;
 }
@@ -7656,21 +7657,57 @@ body {
     min-height: 100%;
     height: auto !important;
     padding-bottom: 3em;
+    padding-top: 30px;
 }
 
 .content {
-  padding: 30px 0;
+  background-color: rgba(255, 255, 255, 1.0);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);  
+  display: none;
+  margin: 10px;
+  padding-top: 10px;
 }
 
-.home {
-  display: none;
+.content .container {
+  width: auto;
 }
+
+.content-title {
+  font-family: 'BankGothicLight';
+  font-weight: 500;
+  text-align: left;
+}
+
+.content-link {
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-link img {
+  height: auto;
+  width: 100%
+}
+
+.content-copy {
+  max-height: 250px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.home .home-film-reviews {
+
+}
+
 
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  .home {
+  .home .content {
     display: block;
   }
 }
@@ -7679,6 +7716,11 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .home-film-reviews,
+  .twitter {
+    height: 300px;
+    overflow: hidden;
+  }
 }
 
 /* Home/Index Page CSS

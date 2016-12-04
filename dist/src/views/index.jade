@@ -1,10 +1,67 @@
 extends ./layout.jade
 
 block content
-  div.wrapper-content
+  div.wrapper-content.home
     include ./includes/slider.jade
     div.container-fluid.clearfix
-      div.content.home START ADDING SKELETON CONTENT HERE!
+      div.row
+        div.col-sm-12.col-lg-8
+          div.content.home-film-reviews
+            .container
+              div.row
+                div.col-sm-12
+                  p.content-title Latest Film Review
+                  article.content-article
+                    div.row
+                      div.col-sm-6
+                        a(class='content-link' href='/film-reviews')
+                          img(class="latest-film-review-image" src='http://images.media-allrecipes.com/userphotos/720x405/828805.jpg' alt="img")
+                      div.col-sm-6
+                        section.content-copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper condimentum egestas. Mauris scelerisque velit at tortor condimentum, id imperdiet dui pellentesque. Etiam viverra, lorem at vulputate elementum, enim sapien semper magna, in varius elit mauris in elit. Etiam eleifend ante vel mauris pulvinar, quis tempor sem hendrerit. Aenean finibus hendrerit ex, sed mattis orci convallis quis. Donec lobortis velit sed augue tempus accumsan. Etiam velit augue, scelerisque ac dignissim et, luctus vel dui. Mauris aliquet mattis urna, sit amet ullamcorper enim laoreet eu. Vestibulum a volutpat felis.
+                        a(class='content-link read-more' href='/film-reviews') ...Read More!
+        div.visible-lg.col-lg-4.col-home-twitter
+          div.content.twitter
+            .container
+              a(class='twitter-timeline' href='https://twitter.com/MatthewDHuntley' data-tweet-limit="1")
+                script(src='//platform.twitter.com/widgets.js' charset='utf-8')
+      div.row
+        div.col-sm-6
+          div.content.home-exercise
+            .container
+              p.content-title Weekend Exercise Challenge
+              article.content-article
+                a(class='content-link' href='/exercise')
+                  img(class="latest-film-review-image" src='http://images.media-allrecipes.com/userphotos/720x405/828805.jpg' alt="img")
+                section.content-copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper condimentum egestas. Mauris scelerisque velit at tortor condimentum, id imperdiet dui pellentesque. Etiam viverra, lorem at vulputate elementum, enim sapien semper magna, in varius elit mauris in elit. Etiam eleifend ante vel mauris pulvinar, quis tempor sem hendrerit. Aenean finibus hendrerit ex, sed mattis orci convallis quis. Donec lobortis velit sed augue tempus accumsan. Etiam velit augue, scelerisque ac dignissim et, luctus vel dui. Mauris aliquet mattis urna, sit amet ullamcorper enim laoreet eu. Vestibulum a volutpat felis.
+                a(class='content-link read-more' href='/exercise') ...Read More!
+        div.col-sm-6
+          div.content.home-eat
+            .container
+              p.content-title Latest Cooking Recipe
+              article.content-article
+                a(class='content-link' href='/eat')
+                  img(class="latest-film-review-image" src='http://images.media-allrecipes.com/userphotos/720x405/828805.jpg' alt="img")
+                section.content-copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper condimentum egestas. Mauris scelerisque velit at tortor condimentum, id imperdiet dui pellentesque. Etiam viverra, lorem at vulputate elementum, enim sapien semper magna, in varius elit mauris in elit. Etiam eleifend ante vel mauris pulvinar, quis tempor sem hendrerit. Aenean finibus hendrerit ex, sed mattis orci convallis quis. Donec lobortis velit sed augue tempus accumsan. Etiam velit augue, scelerisque ac dignissim et, luctus vel dui. Mauris aliquet mattis urna, sit amet ullamcorper enim laoreet eu. Vestibulum a volutpat felis.
+                a(class='content-link read-more' href='/eat') ...Read More!
+      div.row
+        div.col-sm-6
+          div.content.home-travel
+            .container
+              p.content-title Latest Travel Photo
+              article.content-article
+                a(class='content-link' href='/travel')
+                  img(class="latest-film-review-image" src='http://images.media-allrecipes.com/userphotos/720x405/828805.jpg' alt="img")
+                section.content-copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper condimentum egestas. Mauris scelerisque velit at tortor condimentum, id imperdiet dui pellentesque. Etiam viverra, lorem at vulputate elementum, enim sapien semper magna, in varius elit mauris in elit. Etiam eleifend ante vel mauris pulvinar, quis tempor sem hendrerit. Aenean finibus hendrerit ex, sed mattis orci convallis quis. Donec lobortis velit sed augue tempus accumsan. Etiam velit augue, scelerisque ac dignissim et, luctus vel dui. Mauris aliquet mattis urna, sit amet ullamcorper enim laoreet eu. Vestibulum a volutpat felis.
+                a(class='content-link read-more' href='/travel') ...Read More!
+        div.col-sm-6
+          div.content.home-play
+            .container
+              p.content-title Latest Play
+              article.content-article
+                a(class='content-link' href='/play')
+                  img(class="latest-film-review-image" src='http://images.media-allrecipes.com/userphotos/720x405/828805.jpg' alt="img")
+                section.content-copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper condimentum egestas. Mauris scelerisque velit at tortor condimentum, id imperdiet dui pellentesque. Etiam viverra, lorem at vulputate elementum, enim sapien semper magna, in varius elit mauris in elit. Etiam eleifend ante vel mauris pulvinar, quis tempor sem hendrerit. Aenean finibus hendrerit ex, sed mattis orci convallis quis. Donec lobortis velit sed augue tempus accumsan. Etiam velit augue, scelerisque ac dignissim et, luctus vel dui. Mauris aliquet mattis urna, sit amet ullamcorper enim laoreet eu. Vestibulum a volutpat felis.
+                a(class='content-link read-more' href='/play') ...Read More!
       //include ./partials/_header.jade
       //include ./partials/_nav.jade
       //include ./includes/slider.jade
