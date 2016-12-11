@@ -124,17 +124,14 @@ body {
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  .home .content {
-    display: block;
-  }
+
 }
 
 @media (min-width: 992px) {
 }
 
 @media (min-width: 1200px) {
-  .home-film-reviews,
-  .twitter {
+  .home-film-reviews {
     height: 300px;
     overflow: hidden;
   }

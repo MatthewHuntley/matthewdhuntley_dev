@@ -8,7 +8,8 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	  //sass = require('gulp-sass'),
  	maps = require('gulp-sourcemaps'),
- 	del = require('del');
+ 	del = require('del'),
+ 	order = require('gulp-order');
 
 //Map then concatenate all CSS files into one file: main.css:
 gulp.task('concatCSSFiles', function() {
@@ -25,9 +26,27 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/slider.css',
 		'src/public/css/styles.css',
 		'src/public/css/index.css',
+		'src/public/css/twitter.css', 
 		'src/public/css/footer.css',
 		'src/public/css/responsive.css'])
 	.pipe(maps.init())
+	.pipe(order([	
+		'src/public/css/bootstrap.css', 
+		'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
+		'http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic',
+		'src/public/font-awesome/css/font-awesome.min.css', 
+		'src/public/css/animate.min.css',
+		'src/public/css/header.css', 
+		'src/public/css/nav.css', 
+		'src/public/js/slick/slick.css', 
+		'src/public/js/slick/slick-theme.css',
+		'src/public/css/slider.css',
+		'src/public/css/styles.css',
+		'src/public/css/index.css',
+		'src/public/css/twitter.css', 
+		'src/public/css/footer.css',
+		'src/public/css/responsive.css']), { base: './' }
+	)
 	.pipe(concat('main.css'))
 	.pipe(maps.write('./'))
 	.pipe(gulp.dest('src/public/css/'));

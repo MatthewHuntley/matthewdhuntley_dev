@@ -82,6 +82,11 @@
     margin-right: auto;
 }
 
+.slide-link:active,
+.slide-link:focus  {
+	outline: 0;
+}
+
 .slide-link img {
 	height: auto;
 	width: 100%

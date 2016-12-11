@@ -1,28 +1,13 @@
 /*------------------------------------*\
-  #HOME PAGE SPECIFIC STYLES
+  #TWITTER WIDGET
 \*------------------------------------*/
 
 
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
-
-@media only screen and (min-width : 768px) {
-    .hidden-md-up {
-	    display: none !important;
-	}
-
-	.home .content {
-		display: block;
-	}  
-}
-
-@media only screen and (min-width : 992px) {
-    
-}
-
 @media (min-width: 1200px) {
-  .home-film-reviews {
+  .twitter {
     height: 300px;
     overflow: hidden;
   }
