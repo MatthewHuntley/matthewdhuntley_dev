@@ -61,6 +61,10 @@ body {
   text-transform: uppercase;
 }
 
+img {
+  max-width: 100%;
+}
+
 /**
  * Below declarations apply to all pages
  */
@@ -77,13 +81,15 @@ body {
     padding-top: 30px;
 }
 
+/**
+ * Content
+ */
 .content {
+  /*LESS! Notice: We can eventually make this a less mixin since the properties are also used for #latest-film-reviews*/
   background-color: rgba(255, 255, 255, 1.0);
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);  
-  display: none;
-  margin: 10px;
   padding-top: 10px;
 }
 
@@ -91,32 +97,36 @@ body {
   width: auto;
 }
 
-.content-title {
+/**
+ * Sections
+ */
+
+
+ /**
+ * Articles
+ */
+.article-title {
   font-family: 'BankGothicLight';
   font-weight: 500;
   text-align: left;
 }
 
-.content-link {
+.article-link {
   margin-bottom: 15px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.content-link img {
+.article-link img {
   height: auto;
   width: 100%
 }
 
-.content-copy {
+.article-copy {
   max-height: 250px;
   overflow: hidden;
   text-align: left;
-}
-
-.home .home-film-reviews {
-
 }
 
 

@@ -28,6 +28,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/index.css',
 		'src/public/css/twitter.css', 
 		'src/public/css/footer.css',
+		'src/public/css/film-reviews.css',
 		'src/public/css/responsive.css'])
 	.pipe(maps.init())
 	.pipe(order([	
@@ -45,6 +46,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/index.css',
 		'src/public/css/twitter.css', 
 		'src/public/css/footer.css',
+		'src/public/css/film-reviews.css',
 		'src/public/css/responsive.css']), { base: './' }
 	)
 	.pipe(concat('main.css'))

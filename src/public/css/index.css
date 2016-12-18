@@ -1,7 +1,11 @@
 /*------------------------------------*\
-  #HOME PAGE SPECIFIC STYLES
+  #HOME PAGE
 \*------------------------------------*/
 
+.home .content {
+	display: none;
+	margin: 10px;
+}
 
 /*------------------------------------*\
   #MEDIA QUERIES
@@ -15,6 +19,15 @@
 	.home .content {
 		display: block;
 	}  
+
+	.home .row .col-sm-6 div:first-child {
+		height: 400px;
+	}
+
+	.home .row .col-sm-6 div:first-child article a {
+		height: 200px;
+		overflow: hidden;
+	}
 }
 
 @media only screen and (min-width : 992px) {

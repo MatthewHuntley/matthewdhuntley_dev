@@ -6765,6 +6765,20 @@ button.close {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
+/*------------------------------------*\
+  #FILM REVIEWS
+\*------------------------------------*/
+#latest-reviews-list figure {
+  background-color: red;
+  float: left;
+  margin-right: 5%;
+  padding-top: 10px;
+  width: 45%;
+}
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -6895,9 +6909,13 @@ button.close {
 @media (min-width: 1200px) {
 }
 /*------------------------------------*\
-  #HOME PAGE SPECIFIC STYLES
+  #HOME PAGE
 \*------------------------------------*/
 
+.home .content {
+	display: none;
+	margin: 10px;
+}
 
 /*------------------------------------*\
   #MEDIA QUERIES
@@ -6911,6 +6929,15 @@ button.close {
 	.home .content {
 		display: block;
 	}  
+
+	.home .row .col-sm-6 div:first-child {
+		height: 400px;
+	}
+
+	.home .row .col-sm-6 div:first-child article a {
+		height: 200px;
+		overflow: hidden;
+	}
 }
 
 @media only screen and (min-width : 992px) {
@@ -7880,6 +7907,10 @@ body {
   text-transform: uppercase;
 }
 
+img {
+  max-width: 100%;
+}
+
 /**
  * Below declarations apply to all pages
  */
@@ -7896,13 +7927,15 @@ body {
     padding-top: 30px;
 }
 
+/**
+ * Content
+ */
 .content {
+  /*LESS! Notice: We can eventually make this a less mixin since the properties are also used for #latest-film-reviews*/
   background-color: rgba(255, 255, 255, 1.0);
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);  
-  display: none;
-  margin: 10px;
   padding-top: 10px;
 }
 
@@ -7910,32 +7943,36 @@ body {
   width: auto;
 }
 
-.content-title {
+/**
+ * Sections
+ */
+
+
+ /**
+ * Articles
+ */
+.article-title {
   font-family: 'BankGothicLight';
   font-weight: 500;
   text-align: left;
 }
 
-.content-link {
+.article-link {
   margin-bottom: 15px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.content-link img {
+.article-link img {
   height: auto;
   width: 100%
 }
 
-.content-copy {
+.article-copy {
   max-height: 250px;
   overflow: hidden;
   text-align: left;
-}
-
-.home .home-film-reviews {
-
 }
 
 
@@ -7959,8 +7996,29 @@ body {
 /*------------------------------------*\
   #TWITTER WIDGET
 \*------------------------------------*/
-
-
+a.twitter-timeline {
+  /* Buttonish */
+  display: none;
+  padding: 6px 12px 6px 30px;
+  margin: 10px 0;
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  background: #f8f8f8 url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNzIgNzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDcyIDcyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IHg9IjAiIGZpbGw9Im5vbmUiIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiIvPg0KPHBhdGggZmlsbD0iIzU1YWNlZSIgZD0iTTY4LjgxMiwxNS4xNDFjLTIuMzQ4LDEuMDM5LTQuODY5LDEuNzQzLTcuNTE5LDIuMDZjMi43MDMtMS42Miw0Ljc3OC00LjE4Nyw1Ljc1Ni03LjI0NGMtMi41MjksMS41LTUuMzMsMi41OTItOC4zMTMsMy4xNzYNCglDNTYuMzQ5LDEwLjU5MSw1Mi45NDgsOSw0OS4xODIsOWMtNy4yMjksMC0xMy4wOTIsNS44NjEtMTMuMDkyLDEzLjA5M2MwLDEuMDI2LDAuMTE4LDIuMDIxLDAuMzM4LDIuOTgxDQoJYy0xMC44ODUtMC41NDgtMjAuNTI4LTUuNzU3LTI2Ljk4Ny0xMy42NzljLTEuMTI2LDEuOTM2LTEuNzcxLDQuMTg0LTEuNzcxLDYuNTgxYzAsNC41NDIsMi4zMTIsOC41NTEsNS44MjQsMTAuODk4DQoJYy0yLjE0Ni0wLjA2OS00LjE2NS0wLjY1Ny01LjkzLTEuNjM4Yy0wLjAwMiwwLjA1NS0wLjAwMiwwLjExLTAuMDAyLDAuMTYyYzAsNi4zNDUsNC41MTMsMTEuNjM4LDEwLjUwNCwxMi44NA0KCWMtMS4xMDEsMC4yOTgtMi4yNTYsMC40NTctMy40NDksMC40NTdjLTAuODQ2LDAtMS42NjctMC4wNzgtMi40NjUtMC4yMzFjMS42NjcsNS4yLDYuNDk5LDguOTg2LDEyLjIzLDkuMDkNCgljLTQuNDgyLDMuNTEyLTEwLjEyOSw1LjYwNi0xNi4yNiw1LjYwNmMtMS4wNTUsMC0yLjA5Ni0wLjA2MS0zLjEyMi0wLjE4NGM1Ljc5NCwzLjcxNywxMi42NzYsNS44ODIsMjAuMDY3LDUuODgyDQoJYzI0LjA4MywwLDM3LjI1MS0xOS45NDksMzcuMjUxLTM3LjI0OWMwLTAuNTY2LTAuMDE0LTEuMTM0LTAuMDM5LTEuNjk0QzY0LjgzOCwyMC4wNjgsNjcuMDU4LDE3Ljc2NSw2OC44MTIsMTUuMTQxeiIvPg0KPC9zdmc+DQo=") 8px 8px no-repeat;
+  background-size: 1em 1em;
+  /* Text */
+  font: normal 12px/18px Helvetica, Arial, sans-serif;
+  color: #333;
+  white-space: nowrap;
+}
+a.twitter-timeline:hover,
+a.twitter-timeline:focus {
+  background-color: #dedede;
+}
+/* Color Highlight for keyboard navigation */
+a.twitter-timeline:focus {
+  outline: none;
+  border-color: #0089cb;
+}
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
@@ -7968,6 +8026,12 @@ body {
   .twitter {
     height: 300px;
     overflow: hidden;
+  }
+  .timeline-Body {
+    border-left: 10px solid green !important;
+  }
+  .twitter .timeline-Widget {
+    border: 5px solid green;
   }
 }
 
