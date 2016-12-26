@@ -134,7 +134,9 @@ img {
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-
+  .content .container {
+    width: auto;
+  }
 }
 
 @media (min-width: 992px) {
