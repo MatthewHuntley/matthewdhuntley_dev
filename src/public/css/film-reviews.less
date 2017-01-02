@@ -2,6 +2,14 @@
   #FILM REVIEWS
 \*------------------------------------*/
 
+.film-reviews h1 {
+  color: rgba(181, 120, 67, 1);
+}
+
+.film-reviews h3 {
+  margin-top: 10px;
+}
+
 #filmReviewsSearch {
   background-color: rgba(218,208,171,1);
   margin-bottom: 15px;
@@ -52,16 +60,20 @@
   float: left;
   margin-bottom: 10px;
   margin-right: 2%;
+  min-height: 400px;
   padding: 5px;
   width: 48%;
 }
 
-  #latest-reviews-list figure a {
+  #latest-reviews-list figure a,
+  #latest-film-review a {
     transition-duration: 0.3s;
   }
 
   #latest-reviews-list figure a:focus,
-  #latest-reviews-list figure a:hover, {
+  #latest-reviews-list figure a:hover,
+  #latest-film-review a:focus,
+  #latest-film-review a:hover {
     color: rgba(181, 120, 67, 1);
     text-decoration: none;
   }
@@ -75,6 +87,12 @@
     text-decoration: none;
   }
 
+#latest-film-review {
+  background-color: rgba(218,208,171,1);
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
 
 /*------------------------------------*\
   #MEDIA QUERIES
@@ -86,7 +104,17 @@
 }
 
 @media (min-width: 992px) {
+  #latest-reviews-list {
+    background-color: rgba(218,208,171,1);
+    padding: 10px;
+  }
 
+  #latest-reviews-list figure {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
