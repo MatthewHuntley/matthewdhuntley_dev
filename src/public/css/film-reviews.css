@@ -78,7 +78,13 @@
 #latest-film-review {
   background-color: #dad0ab;
   margin-bottom: 15px;
+  max-height: 1000px;
   padding: 10px;
+}
+#latest-film-review p:last-of-type {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /*------------------------------------*\
   #MEDIA QUERIES
@@ -89,6 +95,9 @@
   }
 }
 @media (min-width: 992px) {
+  .content-parent-row {
+    margin-bottom: 30px;
+  }
   #latest-reviews-list {
     background-color: #dad0ab;
     padding: 10px;

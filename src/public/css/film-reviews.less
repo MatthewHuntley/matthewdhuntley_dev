@@ -90,7 +90,14 @@
 #latest-film-review {
   background-color: rgba(218,208,171,1);
   margin-bottom: 15px;
+  max-height: 1000px;
   padding: 10px;
+}
+
+#latest-film-review p:last-of-type {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 
@@ -104,6 +111,10 @@
 }
 
 @media (min-width: 992px) {
+  .content-parent-row {
+    margin-bottom: 30px;
+  }
+
   #latest-reviews-list {
     background-color: rgba(218,208,171,1);
     padding: 10px;

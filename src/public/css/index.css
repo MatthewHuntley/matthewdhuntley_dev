@@ -7,6 +7,15 @@
 	margin: 10px;
 }
 
+.home .article-copy {
+    text-transform: none;
+}
+
+.home .article-link-read-more {
+	margin-top: 30px;
+	text-align: right;
+}
+
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
@@ -20,11 +29,20 @@
 		display: block;
 	}  
 
-	.home .row .col-sm-6 div:first-child {
+	.home .row .col-sm-6 div:first-child:not(.film-review) {
 		height: 400px;
 	}
 
-	.home .row .col-sm-6 div:first-child article a {
+	/*.home .row .col-sm-6 div:first-child article a:nth-of-type(1) {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.home .row .col-sm-6 div:nth-of-type(2) article a {
+		height: auto;
+	}*/
+
+	.home .row .col-sm-6 div:first-child article .article-link-image {
 		height: 200px;
 		overflow: hidden;
 	}

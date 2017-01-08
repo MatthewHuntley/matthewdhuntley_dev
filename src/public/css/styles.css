@@ -111,14 +111,14 @@ img {
   text-align: left;
 }
 
-.article-link {
+.article-link-image {
   margin-bottom: 15px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.article-link img {
+.article-link-image img {
   height: auto;
   width: 100%
 }
@@ -127,6 +127,10 @@ img {
   max-height: 250px;
   overflow: hidden;
   text-align: left;
+}
+
+.article-link-read-more {
+  
 }
 
 
