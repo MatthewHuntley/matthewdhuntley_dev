@@ -1,3 +1,10 @@
+/*------------------------------------*\
+  #ABOUT
+\*------------------------------------*/
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
 @charset "UTF-8";/*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -6844,7 +6851,6 @@ button.close {
 }
 #latest-film-review {
   background-color: #dad0ab;
-  margin-bottom: 15px;
   max-height: 1000px;
   padding: 10px;
 }
@@ -6853,13 +6859,23 @@ button.close {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+#latest-film-review-link {
+  padding: 0;
+}
+.film-reviews .article-link-read-more {
+  background-color: #dad0ab;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+}
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  .film-reviews .container {
+  /*.film-reviews .container {
     width: 100%;
-  }
+  }*/
 }
 @media (min-width: 992px) {
   .content-parent-row {
@@ -8057,6 +8073,7 @@ img {
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);  
+  min-height: 100vh;
   padding-top: 10px;
 }
 
@@ -8105,7 +8122,19 @@ img {
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  
+  .container {
+    width: 100%;
+  }
+
+  .float-left {
+    float: left;
+    width: 50%;
+  }
+
+  .float-right {
+    float: right;
+    width: 50%;
+  }
 }
 
 @media (min-width: 992px) {

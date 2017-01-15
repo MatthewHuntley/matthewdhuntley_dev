@@ -90,6 +90,7 @@ img {
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);  
+  min-height: 100vh;
   padding-top: 10px;
 }
 
@@ -138,7 +139,22 @@ img {
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  
+  .container {
+    width: 100%;
+  }
+
+  /**
+  * Below declarations apply to all interior pages except Film Reviews
+  */
+  .float-left {
+    float: left;
+    width: 50%;
+  }
+
+  .float-right {
+    float: right;
+    width: 50%;
+  }
 }
 
 @media (min-width: 992px) {

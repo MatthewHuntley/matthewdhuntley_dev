@@ -77,7 +77,6 @@
 }
 #latest-film-review {
   background-color: #dad0ab;
-  margin-bottom: 15px;
   max-height: 1000px;
   padding: 10px;
 }
@@ -86,13 +85,23 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+#latest-film-review-link {
+  padding: 0;
+}
+.film-reviews .article-link-read-more {
+  background-color: #dad0ab;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+}
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  .film-reviews .container {
+  /*.film-reviews .container {
     width: 100%;
-  }
+  }*/
 }
 @media (min-width: 992px) {
   .content-parent-row {

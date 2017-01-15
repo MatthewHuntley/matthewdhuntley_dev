@@ -28,6 +28,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/index.css',
 		'src/public/css/twitter.css', 
 		'src/public/css/footer.css',
+		'src/public/css/about.css',
 		'src/public/css/film-reviews.css',
 		'src/public/css/font-awesome.min.css',
 		'src/public/css/responsive.css'])
@@ -47,6 +48,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/index.css',
 		'src/public/css/twitter.css', 
 		'src/public/css/footer.css',
+		'src/public/css/about.css',
 		'src/public/css/film-reviews.css',
 		'src/public/css/font-awesome.min.css',
 		'src/public/css/responsive.css']), { base: './' }
