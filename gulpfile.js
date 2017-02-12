@@ -142,12 +142,20 @@ gulp.task('build', ['minifyCSSFile', 'mapConcatMinifyJSFiles'],
 		}
 ); 
 
+gulp.task('package', ['build'], 
+		//Copy the json file to the 'dist' folder
+		function() {
+			return gulp.src(['package.json'], { base: './'})
+			.pipe(gulp.dest('dist/src'));
+		}
+); 
+
 gulp.task('serve', ['watchFiles']);
 
 //Inherent 'gulp' task (named when 'default' is the name of the task) first runs the other gulp dependencies
 //Then run 'build' task automatically via inherent gulp.start() method (start saves us the trouble of typing out "gulp build", which is being deprecated
 gulp.task('default', ['clean'], function() {
-	gulp.start('build', function() {
-		console.log("External files concatenated and minified.");
+	gulp.start('package', function() {
+		console.log("External files concatenated and minified, dist folder built.");
 	});
 });
