@@ -4,7 +4,8 @@
   "description": "A website about Matthew David Huntley.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/MatthewHuntley/matthewdhuntley/issues"
   },
-  "homepage": "https://github.com/MatthewHuntley/matthewdhuntley#readme",
+  "homepage": "https://github.com/MatthewHuntley/matthewdhuntley_dev#readme",
   "devDependencies": {
     "clean-css": "^3.4.19",
     "del": "^2.2.2",
@@ -31,5 +32,8 @@
   "dependencies": {
     "express": "^4.13.4",
     "jade": "^1.11.0"
+  },
+  "engines": {
+    "node": "6.2.0"
   }
 }
