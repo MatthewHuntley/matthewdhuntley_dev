@@ -16,6 +16,13 @@
 	text-align: right;
 }
 
+/*
+** Film Reviews Section
+*/
+.home .film-title {
+	text-transform: uppercase;
+}
+
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/

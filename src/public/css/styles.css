@@ -101,19 +101,19 @@ img {
 }
 
 /**
- * Sections
+ * Sections and Articles
  */
-
-
- /**
- * Articles
- */
+.section-title,
 .article-title {
   font-family: 'BankGothicLight';
   font-weight: 500;
   text-align: left;
+  text-transform: uppercase;
 }
 
+ /**
+ * Articles
+ */
 .article-link-image {
   margin-bottom: 15px;
   display: block;
@@ -139,8 +139,6 @@ img {
 /**
  * Interior Pages
  */
-
-  
 
    /**
    * Interior page copy
