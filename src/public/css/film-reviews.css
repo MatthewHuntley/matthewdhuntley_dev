@@ -1,6 +1,7 @@
-/*------------------------------------*\
-  #FILM REVIEWS
-\*------------------------------------*/
+/*--------------------------------------------------------------*\
+  #FILM REVIEWS 
+  (STYLE SHEET ENCAPSULATES MAIN FILM REVIEWS PAGE AND SUBPAGES)
+\*--------------------------------------------------------------*/
 .film-reviews h1 {
   color: #b57843;
 }
@@ -94,6 +95,24 @@
   padding-left: 15px;
   padding-right: 15px;
   text-align: right;
+}
+/*------------------------------------*\
+  #SUBPAGES
+\*------------------------------------*/
+/*-----------------------------*\
+  #FILM-REVIEWS-SEARCH RESULTS:
+\*-----------------------------*/
+.film-review-search-results .resultButton {
+  background: transparent;
+  border: none;
+  color: #337ab7;
+  outline: 0;
+  padding: 0;
+}
+.film-review-search-results .resultButton:active,
+.film-review-search-results .resultButton:focus,
+.film-review-search-results .resultButton:hover {
+  color: black;
 }
 /*------------------------------------*\
   #MEDIA QUERIES

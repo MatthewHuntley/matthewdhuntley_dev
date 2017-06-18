@@ -147,37 +147,4 @@ $(document).ready(function () {
       slidesToShow: 1,
       slidesToScroll: 1
     });
-
-    //START HERE!
-    // $(".navbar-toggle").click(function() {
-    // 	var clickover = $(event.target);
-    // 	if(!($('.navbar-toggle').hasClass("navbar-toggle"))) {
-    // 		$(".navbar-toggle").addClass('blah');
-    // 		$(".blah").click(function() {
-		  //   	console.log("Hello");
-		  //   	$(".navbar-toggle").removeClass('blah');
-		  //   });
-    // 	}
-    // });
-
-
-  //   if($(".navbar-collapse").hasClass("navbar-collapse collapse in")) {
-		
-		// $('.navbar-toggle').click(function (event) {
-		//     		console.log("Hello");
-		// 		});
-
-
-  //   	//$("button.navbar-toggle").css('background-color', 'background-color: rgba(30,33,31,1)');    });
-  //   }
-
-  //   $('.in').click(function() {
-  //   	console.log("Hello");
-  //   });
-
 });
-
-//alert("Testing");
-
-//Use only for testing:
-//var myVariable = myUndefinedVariable;
