@@ -40,12 +40,22 @@ console.log(connection.threadId);*/
 
 //Require mysql node module and establish connection to database for matthewdhuntley.com:
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
+
+/*local Database via Mamp's http://localhost:8888/phpMyAdmin*/
+/*var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'root',
   port : '8889',
   database : 'matthewdhuntley'
+});*/
+
+/*Heroku ClearDB Database*/
+var connection = mysql.createConnection({
+  host     : 'us-cdbr-iron-east-03.cleardb.net',
+  user     : 'bd16f9aa3f67c9',
+  password : '95cc362c',
+  database : 'heroku_af028f2224ccdc7'
 });
 
 var connected = false;
@@ -53,6 +63,7 @@ var connected = false;
 //Attempt to connect to matthewdhuntley.com Database prior to app startup:
 connection.connect(function(err) {
   if (err) {
+  	console.log("Hello0");
   	console.log(err.code);
   	console.log(err);
     console.error('error connecting: ' + err.stack);
@@ -69,35 +80,83 @@ connection.connect(function(err) {
 //Handle Database connection errors:
 connection.on('error', function(err){
 	console.log(err.code);
-	if(err.code === 'PROTOCOL_CONNECTION_LOST')
+	if(err.code === 'PROTOCOL_CONNECTION_LOST') {
+		console.log("Hello1");
 		connection.destroy();
 		connected = false;
-	if(err.fatal)
+		connection = mysql.createConnection({
+		  host     : 'us-cdbr-iron-east-03.cleardb.net',
+		  user     : 'bd16f9aa3f67c9',
+		  password : '95cc362c',
+		  database : 'heroku_af028f2224ccdc7'
+		});
+	} else if(err.fatal) {
 		//console.log("Fatal error");
+		console.log("Hello2");
 		connection.destroy();
 		connected = false;
-	if(!err.fatal)
+		connection = mysql.createConnection({
+		  host     : 'us-cdbr-iron-east-03.cleardb.net',
+		  user     : 'bd16f9aa3f67c9',
+		  password : '95cc362c',
+		  database : 'heroku_af028f2224ccdc7'
+		});
+	} else if(!err.fatal) {
 		//console.log("Non-fatal error");
+		console.log("Hello3");
 		connection.destroy();
 		connected = false;
+		connection = mysql.createConnection({
+		  host     : 'us-cdbr-iron-east-03.cleardb.net',
+		  user     : 'bd16f9aa3f67c9',
+		  password : '95cc362c',
+		  database : 'heroku_af028f2224ccdc7'
+		});
 	  	return;
-	if(err.code !== 'PROTOCOL_CONNECTION_LOST')
+	} else if(err.code !== 'PROTOCOL_CONNECTION_LOST') {
+		console.log("Hello4");
 		throw err;
 		connection.destroy();
+		connection = mysql.createConnection({
+		  host     : 'us-cdbr-iron-east-03.cleardb.net',
+		  user     : 'bd16f9aa3f67c9',
+		  password : '95cc362c',
+		  database : 'heroku_af028f2224ccdc7'
+		});
+	} else {
+		console.log("Hello4.5");
+		connection.destroy();
+		connection = mysql.createConnection({
+		  host     : 'us-cdbr-iron-east-03.cleardb.net',
+		  user     : 'bd16f9aa3f67c9',
+		  password : '95cc362c',
+		  database : 'heroku_af028f2224ccdc7'
+		});
+	}
 });
 
 function checkConnection(value = 'index') {
 	if(!connected) {
-		connection = mysql.createConnection({
+		/*local Database via Mamp's http://localhost:8888/phpMyAdmin*/
+		/*connection = mysql.createConnection({
 		  host     : 'localhost',
 		  user     : 'root',
 		  password : 'root',
 		  port : '8889',
 		  database : 'matthewdhuntley'
+		});*/
+
+		/*Heroku ClearDB Database*/
+		connection = mysql.createConnection({
+		  host     : 'us-cdbr-iron-east-03.cleardb.net',
+		  user     : 'bd16f9aa3f67c9',
+		  password : '95cc362c',
+		  database : 'heroku_af028f2224ccdc7'
 		});
 
 		connection.connect(function(err) {
 		  if (err) {
+		  	console.log("Hello5");
 		  	console.log(err.code);
 		  	console.log(err);
 		    console.error('error connecting: ' + err.stack);
@@ -140,7 +199,12 @@ views.forEach(function(value, index) {
 			if(connected) {
 				connection.query(myString, function (error, results, fields) {
 					if(error) {
-						throw error;
+						//throw error;
+						console.log("Hello6");
+						console.log(err.code);
+					  	console.log(err);
+					    console.error('error connecting: ' + err.stack);
+					    return;
 					} else {
 						res.render('film-reviews/film-reviews-search-results', {data: results});
 					}
@@ -153,17 +217,25 @@ views.forEach(function(value, index) {
 				});
 			} else { //Else...
 				//...attempt to establish a Database connection...
-				connection = mysql.createConnection({
+				/*connection = mysql.createConnection({
 				  host     : 'localhost',
 				  user     : 'root',
 				  password : 'root',
 				  port : '8889',
 				  database : 'matthewdhuntley'
+				});*/
+
+				connection = mysql.createConnection({
+				  host     : 'us-cdbr-iron-east-03.cleardb.net',
+				  user     : 'bd16f9aa3f67c9',
+				  password : '95cc362c',
+				  database : 'heroku_af028f2224ccdc7'
 				});
 
 				connection.connect(function(err) {
 					//If no connection was established:
 					if (err) {
+						console.log("Hello7");
 						console.log(err.code);
 						console.log(err);
 						console.error('error connecting: ' + err.stack);
@@ -179,6 +251,7 @@ views.forEach(function(value, index) {
 				  	//...and continue with the query....
 					connection.query(myString, function (error, results, fields) {
 						if(error) {
+							console.log("Hello8");
 							throw error;
 						} else {
 							res.render('film-reviews/film-reviews-search-results', {data: results});

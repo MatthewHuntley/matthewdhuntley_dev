@@ -52,6 +52,9 @@
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
+  #copyright span {
+    display: inline-block;
+  }
 }
 
 @media (min-width: 992px) {
