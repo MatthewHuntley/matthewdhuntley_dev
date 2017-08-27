@@ -2,57 +2,13 @@
   #HOME PAGE
 \*------------------------------------*/
 
-.home .content {
-	display: none;
-	margin: 10px;
-}
-
-.home .article-copy {
-    text-transform: none;
-}
-
-.home .article-link-read-more {
-	margin-top: 30px;
-	text-align: right;
-}
-
-/*
-** Film Reviews Section
-*/
-.home .film-title {
-	text-transform: uppercase;
-}
 
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
 
 @media only screen and (min-width : 768px) {
-    .hidden-md-up {
-	    display: none !important;
-	}
 
-	.home .content {
-		display: block;
-	}  
-
-	.home .row .col-sm-6 div:first-child:not(.film-review) {
-		height: 400px;
-	}
-
-	/*.home .row .col-sm-6 div:first-child article a:nth-of-type(1) {
-		height: 200px;
-		overflow: hidden;
-	}
-
-	.home .row .col-sm-6 div:nth-of-type(2) article a {
-		height: auto;
-	}*/
-
-	.home .row .col-sm-6 div:first-child article .article-link-image {
-		height: 200px;
-		overflow: hidden;
-	}
 }
 
 @media only screen and (min-width : 992px) {

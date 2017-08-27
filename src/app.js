@@ -83,7 +83,7 @@ pool.on('release', function (connection) {
 app.get('/', function(req, res) {
 	var path = req.path;
 	res.locals.path = path; //This locals object is what get rendered in the template; it's the same as writing "res.render('index', { path: path });"
-	res.render('index');
+	res.render('index', {id: 'home'});
 });
 
 //Render subpages
@@ -106,7 +106,7 @@ views.forEach(function(value, index) {
 					// Use the connection
 					connection.query(myString, function (error, results, fields) {
 
-				  	res.render('film-reviews/film-reviews-search-results', {data: results});
+				  	res.render('film-reviews/film-reviews-search-results', {data: results, id: 'search-results'});
 				    
 				    // Release connection back into the pool; NOTE: Connection is still "alive" at this point.
 				    connection.release();
@@ -124,9 +124,9 @@ views.forEach(function(value, index) {
 				}
 			});
 		} else if(value=="film-reviews/film-review") {
-			res.render(value);
+			res.render(value, {id: 'film-review'});
 		} else {
-			res.render(value);
+			res.render(value, {id: value});
 		}
 	});
 });
@@ -138,7 +138,7 @@ app.post('/film-reviews/film-review', function(req,res){
 	//console.log(req.body);
 	//console.log(req.body.title);
 	//console.log(req.body.review);
-	res.render('film-reviews/film-review', {resultsKey : req.body});
+	res.render('film-reviews/film-review', {id: 'film-review', resultsKey : req.body});
 });
 
 //Start the node server

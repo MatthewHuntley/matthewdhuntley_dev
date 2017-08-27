@@ -1,0 +1,34 @@
+/*------------------------------------*\
+  #INTRO BLOCK
+\*------------------------------------*/
+.intro .intro-inner {
+  background: #f5ebc7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  display: block;
+}
+.intro .intro-content {
+  padding: 10px 0;
+}
+.intro .intro-copy {
+  margin-bottom: 0;
+  text-align: center;
+}
+.intro .intro-copy span.quote {
+  color: #b57843;
+  display: block;
+  font-style: italic;
+  margin-right: 10px;
+}
+.intro .intro-copy span.url {
+  font-family: 'BankGothicLight';
+  line-height: 100%;
+}
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 500px) {
+  .intro .intro-copy span.quote {
+    display: inline-block;
+  }
+}

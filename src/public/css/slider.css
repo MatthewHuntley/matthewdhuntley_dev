@@ -77,10 +77,13 @@
 }
 
 .slide-link {
+	display: block;
+	font-family: 'MyriadProBold';
+	font-weight: 700;
 	margin-bottom: 15px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
+    text-transform: uppercase;
 }
 
 .slide-link:active,

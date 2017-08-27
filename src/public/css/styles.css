@@ -71,16 +71,16 @@ img {
  * Below declarations apply to all pages
  */
 .container-fluid:after { 
+    clear: both;
     content: " "; 
     display: block;
-    clear: both;
 } 
 
 .wrapper-content {
-    min-height: 100%;
     height: auto !important;
-    padding-bottom: 3em;
-    padding-top: 30px;
+    min-height: 100%;
+    padding-bottom: 30px;
+    padding-top: 15px;
 }
 
 /**
@@ -144,6 +144,28 @@ img {
    * Interior page copy
    */
 
+/*------------------------------------*\
+  #PAGE-SPECIFIC STYLES
+\*------------------------------------*/
+
+#home .wrapper-content {
+  padding-top: 0;
+}
+
+#home .content {
+  display: none;
+  margin: 10px;
+}
+
+#home .article-copy {
+    text-transform: none;
+}
+
+#home .article-link-read-more {
+  margin-top: 30px;
+  text-align: right;
+}
+
 
 /*------------------------------------*\
   #MEDIA QUERIES
@@ -152,13 +174,41 @@ img {
   .container {
     width: 100%;
   }
+
+  .hidden-md-up {
+      display: none !important;
+  }
+
+  /*Home Page Changes*/
+  #home .content {
+    display: block;
+  }  
+
+  #home .row .col-sm-6 div:first-child:not(.film-review) {
+    height: 400px;
+  }
+
+  /*.home .row .col-sm-6 div:first-child article a:nth-of-type(1) {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .home .row .col-sm-6 div:nth-of-type(2) article a {
+    height: auto;
+  }*/
+
+  #home .row .col-sm-6 div:first-child article .article-link-image {
+    height: 200px;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 992px) {
 }
 
 @media (min-width: 1200px) {
-  .home-film-reviews {
+  /*Home Page Changes*/
+  #home-film-reviews {
     height: 300px;
     overflow: hidden;
   }
