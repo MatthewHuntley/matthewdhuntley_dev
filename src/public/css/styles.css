@@ -27,22 +27,22 @@
 
 @font-face {
     font-family: 'MyriadProIt';
-    src: url('fonts/MyriadProIt.eot');
-    src: url('fonts/MyriadProIt.eot') format('embedded-opentype'),
-         url('fonts/MyriadProIt.woff2') format('woff2'),
-         url('fonts/MyriadProIt.woff') format('woff'),
-         url('fonts/MyriadProIt.ttf') format('truetype'),
-         url('fonts/MyriadProIt.svg#MyriadProIt') format('svg');
+    src: url('../fonts/MyriadProIt.eot');
+    src: url('../fonts/MyriadProIt.eot') format('embedded-opentype'),
+         url('../fonts/MyriadProIt.woff2') format('woff2'),
+         url('../fonts/MyriadProIt.woff') format('woff'),
+         url('../fonts/MyriadProIt.ttf') format('truetype'),
+         url('../fonts/MyriadProIt.svg#MyriadProIt') format('svg');
 }
 
 @font-face {
     font-family: 'MyriadProBold';
-    src: url('fonts/MyriadProBold.eot');
-    src: url('fonts/MyriadProBold.eot') format('embedded-opentype'),
-         url('fonts/MyriadProBold.woff2') format('woff2'),
-         url('fonts/MyriadProBold.woff') format('woff'),
-         url('fonts/MyriadProBold.ttf') format('truetype'),
-         url('fonts/MyriadProBold.svg#MyriadProBold') format('svg');
+    src: url('../fonts/MyriadProBold.eot');
+    src: url('../fonts/MyriadProBold.eot') format('embedded-opentype'),
+         url('../fonts/MyriadProBold.woff2') format('woff2'),
+         url('../fonts/MyriadProBold.woff') format('woff'),
+         url('../fonts/MyriadProBold.ttf') format('truetype'),
+         url('../fonts/MyriadProBold.svg#MyriadProBold') format('svg');
 }
 
 /**
@@ -77,8 +77,6 @@ img {
 } 
 
 .wrapper-content {
-    height: auto !important;
-    min-height: 100%;
     padding-bottom: 30px;
     padding-top: 15px;
 }
@@ -92,7 +90,6 @@ img {
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);  
-  min-height: 100vh;
   padding-top: 10px;
 }
 
@@ -152,9 +149,9 @@ img {
   padding-top: 0;
 }
 
-#home .content {
+#home .wrapper-content-desktop {
   display: none;
-  margin: 10px;
+  margin: 20px 10px;
 }
 
 #home .article-copy {
@@ -180,22 +177,9 @@ img {
   }
 
   /*Home Page Changes*/
-  #home .content {
+  #home .wrapper-content-desktop {
     display: block;
   }  
-
-  #home .row .col-sm-6 div:first-child:not(.film-review) {
-    height: 400px;
-  }
-
-  /*.home .row .col-sm-6 div:first-child article a:nth-of-type(1) {
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .home .row .col-sm-6 div:nth-of-type(2) article a {
-    height: auto;
-  }*/
 
   #home .row .col-sm-6 div:first-child article .article-link-image {
     height: 200px;

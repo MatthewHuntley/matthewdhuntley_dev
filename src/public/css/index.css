@@ -8,7 +8,21 @@
 \*------------------------------------*/
 
 @media only screen and (min-width : 768px) {
+	#home .wrapper-primary-content-desktop {
+		margin-bottom: 20px;
+	}  
 
+	#home .wrapper-secondary-content-desktop .row {
+		display: flex;
+	}  
+
+	#home .wrapper-secondary-content-desktop .row:first-of-type {
+		margin-bottom: 20px;
+	} 
+
+	#home .wrapper-secondary-content-desktop .content {
+    	height: 100%;
+  	}
 }
 
 @media only screen and (min-width : 992px) {
