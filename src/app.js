@@ -17,7 +17,7 @@ var views = [
 				'film-reviews',
 				'film-reviews/film-reviews-search-results',
 				'film-reviews/film-review',
-				'play',
+				'leisure',
 				'test',
 				'travel'
 			];
