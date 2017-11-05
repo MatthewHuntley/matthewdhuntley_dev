@@ -17,12 +17,13 @@ var views = [
 				'film-reviews',
 				'film-reviews/film-reviews-search-results',
 				'film-reviews/film-review',
-				'play',
+				'leisure',
 				'test',
 				'travel'
 			];
 
 //Set up static server to server static files (e.g. .css and .js files), as opposed to dynamic files (e.g. .jade files)
+app.use(express.static('public'));
 app.use('/static', express.static(__dirname + '/public'));
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
