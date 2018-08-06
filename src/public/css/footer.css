@@ -1,64 +1,104 @@
 /*------------------------------------*\
   #FOOTER
 \*------------------------------------*/
-
 .wrapper-footer {
-  background-color: rgba(30, 33, 31, 1);
-  color: rgba(218, 208, 171, 1);
+  position: relative;
+}
+.wrapper-footer .footer {
+  background: #1e211f;
+  color: #dad0ab;
   font-family: 'BankGothicLight';
-  padding: 15px 0;
+  padding: 30px 0;
+  position: relative;
+}
+.wrapper-footer .col-copyright {
+  margin-bottom: 22px;
+}
+.wrapper-footer .copyright-info {
+  font-size: 0.85em;
   position: relative;
   text-transform: uppercase;
 }
-
-#copyright {
-  font-size: 0.85em;
-  margin-bottom: 10px;
-  padding: 15px 0;
+.wrapper-footer #copyright-year {
+  display: inline-block;
 }
-
-#copyright span {
+.wrapper-footer .copyright-rights {
   display: block;
 }
-
-#followMe-footer {
-  font-size: 1.3em;
-  padding-top: 15px;
-  z-index: 2000;
+.wrapper-footer .footer-followMe-wrapper {
+  position: relative;
 }
-
-#followMe-footer a { 
+.wrapper-footer .footer-followMe {
+  display: inline-block;
+  line-height: 100%;
+  position: relative;
+}
+.wrapper-footer .footer-followMe-text {
+  display: block;
+  font-size: 1.4em;
+  line-height: 100%;
+  margin-bottom: 5px;
+}
+.wrapper-footer .footer-followMe a {
+  display: inline-block;
   color: inherit;
   font-size: 1.25em;
   margin: 1px 10px 1px 0px;
   text-align: left;
 }
-
-#followMe-footer a.email { 
+.wrapper-footer .footer-followMe a.email {
   margin-top: 0px;
 }
-
-#followMe-footer a img { 
+.wrapper-footer .footer-followMe a img {
   vertical-align: top;
   width: 24px;
 }
-
-#followMe-footer a img.envelope { 
+.wrapper-footer .footer-followMe a img.envelope {
   margin-top: -3px;
   width: 30px;
 }
-
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
+@media (min-width: 600px) {
+  .wrapper-footer .row {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .wrapper-footer .col-sm-8 {
+    float: left;
+    width: 50%;
+  }
+  .wrapper-footer .col-sm-4 {
+    float: left;
+    width: 50%;
+  }
+  .wrapper-footer .col-copyright {
+    margin-bottom: 0;
+  }
+  .wrapper-footer .footer-followMe-wrapper {
+    text-align: right;
+  }
+  .wrapper-footer .footer-followMe {
+    text-align: left;
+  }
+}
 @media (min-width: 768px) {
-  #copyright span {
+  .wrapper-footer .col-sm-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+  .wrapper-footer .col-sm-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .wrapper-footer .copyright-rights {
     display: inline-block;
   }
 }
-
-@media (min-width: 992px) {
-}
-
 @media (min-width: 1200px) {
+  .wrapper-footer .container {
+    max-width: 1400px;
+  }
 }

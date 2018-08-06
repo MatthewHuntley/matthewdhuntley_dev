@@ -19,6 +19,7 @@ gulp.task('concatCSSFiles', function() {
 		'http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic',
 		'src/public/font-awesome/css/font-awesome.min.css', 
 		'src/public/css/animate.min.css',
+		'src/public/css/header-nav-wrapper.css', 
 		'src/public/css/header.css', 
 		'src/public/css/nav.css', 
 		'src/public/js/slick/slick.css', 
@@ -31,8 +32,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/footer.css',
 		'src/public/css/interior.css',
 		'src/public/css/film-reviews.css',
-		'src/public/css/font-awesome.min.css',
-		'src/public/css/responsive.css'])
+		'src/public/css/font-awesome.min.css'])
 	.pipe(maps.init())
 	.pipe(order([	
 		'src/public/css/bootstrap.css', 
@@ -40,6 +40,7 @@ gulp.task('concatCSSFiles', function() {
 		'http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic',
 		'src/public/font-awesome/css/font-awesome.min.css', 
 		'src/public/css/animate.min.css',
+		'src/public/css/header-nav-wrapper.css',
 		'src/public/css/header.css', 
 		'src/public/css/nav.css', 
 		'src/public/js/slick/slick.css', 
@@ -53,8 +54,7 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/footer.css',
 		'src/public/css/about.css',
 		'src/public/css/film-reviews.css',
-		'src/public/css/font-awesome.min.css',
-		'src/public/css/responsive.css']), { base: './' }
+		'src/public/css/font-awesome.min.css']), { base: './' }
 	)
 	.pipe(concat('main.css'))
 	.pipe(maps.write('./'))

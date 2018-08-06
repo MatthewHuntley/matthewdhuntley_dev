@@ -1,0 +1,224 @@
+/*------------------------------------*\
+  #MAIN STYLES
+\*------------------------------------*/
+
+/**
+ * Fonts
+ */
+@font-face {
+    font-family: 'BankGothicLight';
+    src: url('../fonts/BankGothicLight.eot');
+    src: url('../fonts/BankGothicLight.eot') format('embedded-opentype'),
+         url('../fonts/BankGothicLight.woff2') format('woff2'),
+         url('../fonts/BankGothicLight.woff') format('woff'),
+         url('../fonts/BankGothicLight.ttf') format('truetype'),
+         url('../fonts/BankGothicLight.svg#BankGothicLight') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/MyriadProRegular.eot');
+    src: url('../fonts/MyriadProRegular.eot') format('embedded-opentype'),
+         url('../fonts/MyriadProRegular.woff2') format('woff2'),
+         url('../fonts/MyriadProRegular.woff') format('woff'),
+         url('../fonts/MyriadProRegular.ttf') format('truetype'),
+         url('../fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProIt';
+    src: url('../fonts/MyriadProIt.eot');
+    src: url('../fonts/MyriadProIt.eot') format('embedded-opentype'),
+         url('../fonts/MyriadProIt.woff2') format('woff2'),
+         url('../fonts/MyriadProIt.woff') format('woff'),
+         url('../fonts/MyriadProIt.ttf') format('truetype'),
+         url('../fonts/MyriadProIt.svg#MyriadProIt') format('svg');
+}
+
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('../fonts/MyriadProBold.eot');
+    src: url('../fonts/MyriadProBold.eot') format('embedded-opentype'),
+         url('../fonts/MyriadProBold.woff2') format('woff2'),
+         url('../fonts/MyriadProBold.woff') format('woff'),
+         url('../fonts/MyriadProBold.ttf') format('truetype'),
+         url('../fonts/MyriadProBold.svg#MyriadProBold') format('svg');
+}
+
+/**
+ * Body
+ */
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: rgba(39, 78, 122, 1.0);
+  color: rgba(30,33,31,1.0);
+  display: flex;
+  flex-direction: column;
+  font-family: 'MyriadProRegular';
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+}
+
+/**
+ * Below declarations apply to all pages
+ */
+.container-fluid:after { 
+  clear: both;
+  content: " "; 
+  display: block;
+} 
+
+.wrapper-content {
+  flex: 1;
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+
+/**
+ * Content
+ */
+.content {
+  /*LESS! Notice: We can eventually make this a less mixin since the properties are also used for #latest-film-reviews*/
+  background-color: rgba(255, 255, 255, 1.0);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);  
+  padding: 10px 0;
+}
+
+.primary-content .content {
+  padding-bottom: 20px;
+}
+
+.content .container {
+  width: auto;
+}
+
+/**
+ * Sections and Articles
+ */
+.section-title,
+.article-title {
+  font-family: 'BankGothicLight';
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+ /**
+ * Articles
+ */
+.article-link {
+
+}
+
+.article-link-image {
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .article-link-image img {
+    margin-bottom: 5px;
+    height: auto;
+    width: 100%
+  }
+
+  .article-link-image .article-link-image-caption {
+    color: rgba(34, 34, 34, 0.75);
+    font-size: 0.85em;
+    transition-duration: 0.5s;
+  }
+
+.article-link-image:active,
+.article-link-image:focus,
+.article-link-image:hover {
+  text-decoration: none;
+}
+
+.article-copy {
+  max-height: 250px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.article-link-read-more {
+  
+}
+
+/**
+ * Interior Pages
+ */
+
+   /**
+   * Interior page copy
+   */
+
+/*------------------------------------*\
+  #PAGE-SPECIFIC STYLES
+\*------------------------------------*/
+
+#home .wrapper-content {
+  padding-top: 0;
+}
+
+#home .wrapper-content-desktop {
+  display: none;
+  margin: 20px 10px;
+}
+
+#home .article-copy {
+    text-transform: none;
+}
+
+#home .article-link-read-more {
+  margin-top: 30px;
+  text-align: right;
+}
+
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .hidden-md-up {
+      display: none !important;
+  }
+
+  /*Home Page Changes*/
+  #home .wrapper-content-desktop {
+    display: block;
+  }  
+
+  #home .row .col-sm-6 div:first-child article .article-link-image {
+    height: 200px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  /*Home Page Changes*/
+  #home-film-reviews {
+    height: 300px;
+    overflow: hidden;
+  }
+}

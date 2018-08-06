@@ -1,124 +1,103 @@
 /*------------------------------------*\
   #SLICK CAROUSEL
 \*------------------------------------*/
-
-.wrapper-carousel {
-	position: relative;
-	padding: 10px 0;
+.wrapper-slick-carousel {
+  position: relative;
 }
-
-	.wrapper-carousel .article-wrapper {
-		background-color: rgba(255, 255, 255, 1.0);
-		-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
-		-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
-		box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);	
-		margin: 10px;
-		padding-top: 10px;
-	}
-
 /**
- * slick-theme.css overrides
- */
- .slick-arrow,
- .slick-next, 
- .slick-prev {
- 	display: none !important;
- }
-
-.slick-dots {
- 	bottom: -15px;
- }
-
- .slick-dots li {
- 	vertical-align: middle;
- }
-
- .slick-dots li button {
-
- }
-
- .slick-dots li button::before {
-	color: rgba(255, 255, 255, 1.0);
-	font-size: 50px;
-	opacity: 1.0;
-}
-
-.slick-dots li.slick-active button::before {
-	color: #b57843;
-	opacity: 1.0;
-}
-
+ 	 * slick-theme.css overrides
+	*/
 /**
- * Inherent class from slick.css representing each slide; exists on same level as author-implemented id
- */
-.slick-slide {
-	margin-bottom: 12px;
-	width: 100%;
+	 * Inherent class from slick.css representing each slide; exists on same level as author-implemented id
+	*/
+.wrapper-slick-carousel .slick-slide {
+  margin-bottom: 12px;
+  width: 100%;
 }
-
 /**
- * Removed default dotted outline
- */
-.slick-slide:active,
-.slick-slide:focus {
-	outline: 0;
+	 * Remove default dotted outline
+	*/
+.wrapper-slick-carousel .slick-slide:active,
+.wrapper-slick-carousel .slick-slide:focus {
+  outline: 0;
 }
-
 /**
- * Author-implemented selectors
- */
-.slide-title {
-	font-family: 'BankGothicLight';
-	font-weight: 500;
-	text-align: left;
-	text-transform: uppercase;
+	 * Slick Arrows
+	*/
+.wrapper-slick-carousel .slick-arrow,
+.wrapper-slick-carousel .slick-next,
+.wrapper-slick-carousel .slick-prev {
+  display: none !important;
 }
-
-.slide-link {
-	display: block;
-	font-family: 'MyriadProBold';
-	font-weight: 700;
-	margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-transform: uppercase;
+/**
+	 * Slick Arrows
+	*/
+.wrapper-slick-carousel .slick-dots {
+  bottom: -15px;
 }
-
-.slide-link:active,
-.slide-link:focus  {
-	outline: 0;
+.wrapper-slick-carousel .slick-dots li {
+  vertical-align: middle;
 }
-
-.slide-link img {
-	height: auto;
-	width: 100%
+.wrapper-slick-carousel .slick-dots li button::before {
+  color: #ffffff;
+  font-size: 50px;
+  opacity: 1.0;
 }
-
-.slide-copy {
-	max-height: 250px;
-	overflow: hidden;
-	text-align: left;
+.wrapper-slick-carousel .slick-dots li.slick-active button::before {
+  color: #b57843;
+  opacity: 1.0;
 }
-
-.read-more {
-	margin-top: 15px;
-	text-align: right;
+/**
+ 	 * Developer-implemented styles
+	*/
+.wrapper-slick-carousel .slick-carousel {
+  padding: 10px 0;
+  position: relative;
 }
-
-/*#slide-latest-film-review .slide-image {
-	background: url('http://images.media-allrecipes.com/userphotos/720x405/828805.jpg') no-repeat;
-	background-size: contain;
-	min-height: 520px;
-}*/
-
+.wrapper-slick-carousel .article-wrapper {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  padding-top: 10px;
+}
+.wrapper-slick-carousel .slide-title {
+  display: block;
+  font-family: 'BankGothicLight';
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+}
+.wrapper-slick-carousel .slide-link {
+  display: block;
+  font-family: 'MyriadProBold';
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+.wrapper-slick-carousel .slide-link:active,
+.wrapper-slick-carousel .slide-link:focus,
+.wrapper-slick-carousel .slide-link:hover {
+  outline: 0;
+}
+.wrapper-slick-carousel img {
+  height: auto;
+  width: 100%;
+}
+.wrapper-slick-carousel .slide-copy {
+  display: block;
+  max-height: 250px;
+  overflow: hidden;
+  text-align: left;
+}
+.wrapper-slick-carousel .slide-link-read-more {
+  display: block;
+  margin-top: 15px;
+  text-align: right;
+}
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
-}

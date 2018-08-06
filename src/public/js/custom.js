@@ -21,14 +21,18 @@ $(document).ready(function () {
     $(".active").parents(".navbar li").addClass("active-top");
 
     //Slick carousel
-    $('.wrapper-carousel').slick({
+    $('.slick-carousel').slick({
       autoplay: true,
       autoplaySpeed: 3500,
+      adaptiveHeight: true,
       dots: true,
       fade: true,
       infinite: true,
-      speed: 1500,
+      speed: 750,
       slidesToShow: 1,
       slidesToScroll: 1
     });
+
+    //Show current year for footer copyright section
+    document.getElementById('copyright-year').appendChild(document.createTextNode(new Date().getFullYear()))
 });

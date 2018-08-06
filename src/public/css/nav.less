@@ -1,344 +1,281 @@
+/*------------------------------------*\
+  #NAV
+\*------------------------------------*/
+
 .wrapper-nav {
 	position: relative;
 }
 
-.navbar {
-	background-color: rgba(219,209,173,1);
-	margin-bottom: 0;
-	min-height: 100px;
-}
-
-.navbar-inverse {
-	border: none;
-}
-
-.navbar .navbar-header {
-	min-height: 100px;
-}
-
-/*Uncomment below to center nav options in collapsed state*/
-/*.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-}
-
-.navbar .navbar-collapse {
-    text-align: center;
-}*/
-
-/* Navigation bar --> Brand (MDH - Matthew D Huntley)
-===================================================== */
-.navbar-brand {
-    margin-top: 35px;
-}
-
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-	color: rgb(181,120,67);
-  	background-color: transparent;
-}
-
-.navbar-inverse .navbar-brand, 
-.navbar-inverse .navbar-nav > li > a {
-	color: rgb(30,33,31);
-	font-family: 'BankGothicLight';
-	text-align: center;
-}
-
-.navbar-inverse .navbar-brand span.initials {
-	font-size: 4em;
-}
-
-.navbar-inverse .navbar-brand span.fullName {
-	font-size: 1em;
-	text-transform: uppercase;
-}
-
-/* Navigation bar --> Hamburger
-=============================== */
-.navbar-toggle {
-	background-color: rgba(30,33,31,1);
-	margin-top: 50px;
-}
-
-.navbar-inverse .navbar-toggle:hover, 
-.navbar-inverse .navbar-toggle:focus {
-    background-color: rgb(181,120,67);
-}
-
-/* Navigation Bar Collapsed
-=========================== */
-.navbar-inverse .navbar-collapse {
-	background-color: rgba(181,120,67,1);
-	font-size: 0.75em;
-}
-
-/* Navigation Bar Collapsed --> List Items
-============================================ */
-.navbar-inverse .navbar-collapse .navbar-nav > li {
-	display: block;
-	float: none;
-	padding: 0px;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-collapse .navbar-nav > li > a:focus {
-	color: rgba(255,255,255,1);
-}
-
-.navbar-inverse .navbar-collapse > .active > a,
-.navbar-inverse .navbar-collapse > .active > a:hover,
-.navbar-inverse .navbar-collapse > .active > a:focus {
-	color: red;
-  	background-color: #080808;
-}
-
-.navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
-	background-color: rgb(181,120,67);
-    border: none;
-    font-family: BankGothicLight;
-    color: rgb(30,33,31);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 20px;
-    text-transform: uppercase;
-}
-
-.navbar-inverse .navbar-collapse .navbar-nav > li > div > button:hover {
-	color: rgba(255,255,255,1);
-}
-
-/* Navigation Bar Dropdown ("Lifestyle")
-========================================*/
-.dropdown {
-	padding: 0px 15px;
-}
-
-.dropdown-menu {
-	color: rgb(30,33,31);
-	font-family: BankGothicLight;
-	font-size: 12px;
-}
-
-.open {
-	text-align: center;
-}
-
-.open > ul.dropdown-menu {
-	display: inline;
-	text-align: center;
-}
-
-.open > ul.dropdown-menu li {
-	margin-left: 38%;
-	margin-bottom: 10px;
-	text-align: left;
-}
-
-/* Adding bullet point to dropdown menu list item:;
-================================================= */
-.open > ul.dropdown-menu li:before {
-    content: "\25cf";
-    float: left;
-    margin-top: 3px;
-    margin-right: 4px
-}
-
-.btn-default:active:hover,
-.btn-default.active:hover,
-.open > .dropdown-toggle.btn-default:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.open > .dropdown-toggle.btn-default:focus,
-.btn-default:active.focus,
-.btn-default.active.focus,
-.open > .dropdown-toggle.btn-default.focus {
-	background-color: rgb(181,120,67);
-	color: rgba(255,255,255,1);
-}
-
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-	color: rgb(30,33,31);
-	display: inline-block;
-	margin-left: 4px;
-	padding: 0;
-}
-
-/* Navigation Bar (Collapsed and Non-Collapsed) --> List Items
-============================================================== */
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-	background-color: transparent;
-  	color: rgb(181,120,67);
-}
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: rgb(181,120,67);
-  background-color: #080808;
-}
-
-/* Add active state to nav bar options
-====================================== */
-.navbar #navbar .nav li.active-top,
-.navbar #navbar .nav li.active-top button,
-.navbar #navbar .nav li a.active {
-	color: rgba(255, 255, 255, 1.0);
-}
-
-/*
-Min-Width: Refers to everything greater than or equal to the amount given.
-Max-Width: Refers to everything less than or equal to the amount given.
-*/
-
-/*==================================================
-            Bootstrap 3 Media Queries             
-==================================================*/
-
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
-    
-}
-
-@media only screen and (min-width : 400px) {
-    .navbar-inverse .navbar-collapse .navbar-nav > li {
-    	display: inline-block;
-    	float: left;
-    }
-
-    .open > ul.dropdown-menu {
-		text-align: left;
-	}
-
-	.open > ul.dropdown-menu li {
-		margin-left: 8px;
-	}
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-    .navbar-inverse .navbar-collapse {
-        font-size: 1em;
-    }
-
-    .dropdown-menu {
-        font-size: 1em;
-    }
-
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-        margin-top: 3px;
-    }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-    .nav {
-        margin-top: 55px;
-    }
-
-    .navbar-inverse .navbar-nav > li > a {
-        padding-bottom: 0px;
-    }
-
-    .navbar-inverse .navbar-collapse,
-    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button {
-        background-color: rgba(219,209,173,1);
-    }
-
-    .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover,
-    .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus,
-    .navbar-inverse .navbar-collapse .navbar-nav > li > div > button:hover {
-        color: rgb(181,120,67);
-    }
-
-    .dropdown {
-        margin-top: 5px;
-    }
-
-    .btn-default:active:hover,
-    .btn-default.active:hover,
-    .open > .dropdown-toggle.btn-default:hover,
-    .btn-default:active:focus,
-    .btn-default.active:focus,
-    .open > .dropdown-toggle.btn-default:focus,
-    .btn-default:active.focus,
-    .btn-default.active.focus,
-    .open > .dropdown-toggle.btn-default.focus {
-        background-color: rgba(219,209,173,1);
-        color: rgb(181,120,67);
-    }
-
-    .open > ul.dropdown-menu {
-        background-color: rgb(181,120,67);
-        border-radius: 0;
-        margin-top: 0;
-    }
-
-    .open > ul.dropdown-menu li:before {
-        display: none;
-    }
-
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-        background-color: rgb(181,120,67);
-        color: rgb(30,33,31);
-        display: block;
-        padding: 3px 20px;
+    .wrapper-nav .navbar {
+        background: rgba(219,209,173,1.0);
+        font-family: 'BankGothicLight';
         margin: 0;
     }
 
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
-        color: rgba(255,255,255,1);
+        .wrapper-nav .navbar-inverse {
+            border: none;
+        }
+
+            .wrapper-nav .navbar-header {
+                padding: 10px 0;
+                position: relative;
+            }
+
+                /*
+                ** Navigation Brand 
+                */
+                .wrapper-nav .navbar-brand {
+                    color: rgba(30,33,31,1.0);
+                    display: inline-block;
+                    height: auto;
+                    margin: 0 0 0 15px;
+                    padding: 0;
+                    text-align: center;
+                    transition-duration: 0.5s;
+                }
+
+                    .wrapper-nav .navbar-brand:active,
+                    .wrapper-nav .navbar-brand:focus,
+                    .wrapper-nav .navbar-brand:hover {
+                      	background: transparent;
+                        color: rgba(181,120,67,1.0);
+                    }
+
+                        .wrapper-nav .initials {
+                            display: block;
+                            font-size: 3.5em;
+                            height: 34px;
+                            letter-spacing: -0.08em;
+                            line-height: 68px;
+                        }
+
+                        .wrapper-nav .fullName {
+                            display: block;
+                            font-size: 1em;
+                            line-height: 100%;
+                            height: 16px;
+                            text-transform: uppercase;
+                        }
+
+                    /*
+                    ** Navigation Collpased Menu Button (Hamburger)
+                    */
+                    .wrapper-nav .navbar-toggle {
+                        background: rgba(30,33,31,1.0);
+                        height: 34px;
+                        margin: 0 15px 0 0;
+                        transition-duration: 0.5s;
+                    }
+
+                    .wrapper-nav .navbar-toggle:active, 
+                    .wrapper-nav .navbar-toggle:focus, 
+                    .wrapper-nav .navbar-toggle:hover {
+                        background: rgba(181,120,67,1.0);
+                    }
+
+            /* 
+            * Navigation Main Bar
+            */
+            .wrapper-nav .navbar-collapse {
+                background: rgba(181,120,67,1.0);
+            }
+
+                .wrapper-nav .navbar-collapse .navbar-nav > li {
+                    display: block;
+                    float: none;
+                    padding: 0px;
+                    text-transform: uppercase;
+                }
+
+                    .wrapper-nav .navbar-inverse .navbar-nav > li > a {
+                        color: rgba(30, 33, 31, 1.0);
+                        height: auto;
+                        line-height: 25px;
+                        padding: 10px 15px;
+                        transition-duration: 0.5s;
+                    }
+
+                        .wrapper-nav .navbar-inverse .navbar-nav > li > a i {
+                            vertical-align: top;
+                        }
+
+                    .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:active,
+                    .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus,
+                    .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover {
+                        color: rgba(255, 255, 255, 1.0);
+                    }
+
+                /*
+                * Navigation Main Bar: Active State
+                */
+                .wrapper-nav .navbar #navbar .nav li.active-top,
+                .wrapper-nav .navbar #navbar .nav li.active-top button,
+                .wrapper-nav .navbar #navbar .nav li a.active {
+                    color: rgba(255, 255, 255, 1.0);
+                }
+
+                        /* 
+                        * Navigation Bar "Lifestyle" Dropdown
+                        */
+                        .wrapper-nav .dropdown {
+                            color: rgba(30, 33, 31, 1.0);
+                            font-family: 'BankGothicLight';
+                            line-height: 100%;
+                            padding: 10px 15px;
+                            transition-duration: 0.5s;
+                        }
+
+                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a, 
+                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a:active, 
+                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a:focus, 
+                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a:hover {
+                                    background: rgba(30,33,31,1.0);
+                                    color: rgba(255, 255, 255, 1.0);
+                                }
+
+                                    .wrapper-nav .dropdown-menu {
+                                        font-size: 1em;
+                                    }
+
+                                    .wrapper-nav .open > ul.dropdown-menu {
+                                        background: rgba(30,33,31,1.0);
+                                    }
+
+                                        .wrapper-nav .open > ul.dropdown-menu li {
+                                            display: block
+                                        }
+
+                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+                                                color: rgba(255, 255, 255, 1.0);
+                                                transition-duration: 0.5s;
+                                            }
+
+                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:active,
+                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus,
+                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+                                                background: transparent;
+                                                color: rgba(255, 255, 255, 0.5);
+                                            }
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+
+@media (min-width: 600px) {
+    .wrapper-nav .navbar {
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .wrapper-nav .navbar-header {
+        display: none;
+    }
+
+    .wrapper-nav .navbar-collapse {
+        background: transparent;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: auto;
+    }
+
+    .wrapper-nav .navbar-collapse.collapse {
+        display: block;
+        height: auto !important;
+        overflow: visible !important;
+        padding-bottom: 0;
+    }
+
+    .wrapper-nav .navbar-collapse.in {
+        overflow-y: visible;
+    }
+
+    .wrapper-nav .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+
+    .wrapper-nav .navbar-collapse .navbar-nav > li  {
+        display: inline-block;;
+    }
+
+    .wrapper-nav .navbar-inverse .navbar-nav > li > a {
+        font-size: 1.15em;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .wrapper-nav .navbar-nav .open .dropdown-menu {
+        position: absolute;
     }
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-    #followMe_top {
+@media (min-width : 768px) {
+    .wrapper-nav .navbar-collapse {
+        background: transparent;
+        padding: 0;
+    }
+}
+
+@media (min-width : 992px) {
+    .wrapper-nav #followMe_top {
         display: block;
     }
-
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-    .navbar-inverse .navbar-brand span.initials {
+@media (min-width : 1200px) {
+    .wrapper-nav {
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        width: 100%;
+    }
+
+    .wrapper-nav .navbar {
+        background: transparent;
+        height: 55px !important;
+    }
+
+     .wrapper-nav .container {
+        height: 100%;
+        max-width: 1400px;
+    }
+
+    .wrapper-nav .navbar-collapse {
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: auto;
+    }
+
+    .wrapper-nav .navbar-collapse.collapse {
+        display: inline-block !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin-top: 12.5px;
+        padding-bottom: 0;
+        pointer-events: auto;
+    }
+
+    .wrapper-nav .navbar-inverse .navbar-nav > li > a {
+        padding-top: 14px;
+        padding-bottom: 0;
+    }
+
+    .wrapper-nav .navbar-inverse .navbar-nav > li > a i {
+        margin-top: -5px;
+    }
+
+
+    .wrapper-nav .navbar-inverse .navbar-brand span.initials {
         font-size: 5em;
     }
 
-    .navbar-inverse .navbar-brand span.fullName,
-    .navbar-inverse .navbar-collapse {
+    .wrapper-nav .navbar-inverse .navbar-brand span.fullName,
+    .wrapper-nav .navbar-inverse .navbar-collapse {
         font-size: 1.25em;
     }
-}
-
-/*==========  Non-Mobile First Method  ==========*/
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-
-}
-
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
-    
 }
