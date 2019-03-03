@@ -1,57 +1,40 @@
 /*------------------------------------*\
-  #ALL INTERIOR PAGES
+  #INTERIOR PAGE(S)
 \*------------------------------------*/
-/**
-* Interior page title
+/*
+** All Interior Pages
 */
-/**
-* Interior page images
-*/
-.interior-page-image-container {
-  margin-bottom: 30px;
+.wrapper-content.interior-page .content-body {
+  height: 100%;
 }
-.interior-page-image-container img {
+.wrapper-content.interior-page .content-body-primary {
+  height: 100%;
+}
+.wrapper-content.interior-page .container {
+  height: 100%;
+  max-width: 1400px;
+  width: 100%;
+}
+.wrapper-content.interior-page .row {
+  display: flex;
+  height: 100%;
+}
+.wrapper-content.interior-page [class*='col-'] {
+  flex: auto;
+}
+.wrapper-content.interior-page .secondary-item {
+  height: auto;
+}
+.wrapper-content.interior-page .primary-item-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
   margin-bottom: 15px;
+  text-transform: none;
 }
-/*------------------------------------*\
-  #ABOUT
-\*------------------------------------*/
-/*------------------------------------*\
-  #EAT
-\*------------------------------------*/
-/*------------------------------------*\
-  #EXERCISE
-\*------------------------------------*/
-/*------------------------------------*\
-  #PLAY
-\*------------------------------------*/
-/*------------------------------------*\
-  #TRAVEL
-\*------------------------------------*/
+/*
+** About
+*/
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
-@media (min-width: 768px) {
-  /**
-	* Below declarations apply to all interior pages except Film Reviews
-	*/
-  .float-left {
-    float: left;
-    width: 50%;
-  }
-  .float-right {
-    float: right;
-    width: 50%;
-  }
-  .interior-page-image-container {
-    top: -45px;
-  }
-}
-@media (min-width: 992px) {
-  .float-left {
-    width: 33.333%;
-  }
-  .float-right {
-    width: 66.666%;
-  }
-}

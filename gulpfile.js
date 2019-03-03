@@ -2,11 +2,10 @@
 
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
-	cleanCSS = require('gulp-clean-css'),
 	cssMap = require('vinyl-map'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
-	  //sass = require('gulp-sass'),
+	//sass = require('gulp-sass'),
  	maps = require('gulp-sourcemaps'),
  	del = require('del'),
  	order = require('gulp-order');
@@ -19,15 +18,20 @@ gulp.task('concatCSSFiles', function() {
 		'http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic',
 		'src/public/font-awesome/css/font-awesome.min.css', 
 		'src/public/css/animate.min.css',
+		'src/public/css/film-review.css',
+		'src/public/css/film-reviews.css',
+		'src/public/css/film-reviews-search.css',
+		'src/public/css/film-reviews-search-results.css',
 		'src/public/css/header-nav-wrapper.css', 
 		'src/public/css/header.css', 
-		'src/public/css/nav.css', 
+		'src/public/css/index.css',
+		'src/public/css/intro.css',
+		'src/public/css/nav.css',
+		'src/public/css/sidebar.css', 
 		'src/public/js/slick/slick.css', 
 		'src/public/js/slick/slick-theme.css',
 		'src/public/css/slider.css',
 		'src/public/css/styles.css',
-		'src/public/css/intro.css',
-		'src/public/css/index.css',
 		'src/public/css/twitter.css', 
 		'src/public/css/footer.css',
 		'src/public/css/interior.css',
@@ -41,8 +45,13 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/font-awesome/css/font-awesome.min.css', 
 		'src/public/css/animate.min.css',
 		'src/public/css/header-nav-wrapper.css',
-		'src/public/css/header.css', 
-		'src/public/css/nav.css', 
+		'src/public/css/header.css',
+		'src/public/css/film-review.css', 
+		'src/public/css/film-reviews.css',
+		'src/public/css/film-reviews-search.css',
+		'src/public/css/film-reviews-search-results.css',
+		'src/public/css/nav.css',
+		'src/public/css/sidebar.css', 
 		'src/public/js/slick/slick.css', 
 		'src/public/js/slick/slick-theme.css',
 		'src/public/css/slider.css',
@@ -53,7 +62,6 @@ gulp.task('concatCSSFiles', function() {
 		'src/public/css/twitter.css', 
 		'src/public/css/footer.css',
 		'src/public/css/about.css',
-		'src/public/css/film-reviews.css',
 		'src/public/css/font-awesome.min.css']), { base: './' }
 	)
 	.pipe(concat('main.css'))
@@ -65,7 +73,6 @@ gulp.task('concatCSSFiles', function() {
 gulp.task('minifyCSSFile', ['concatCSSFiles'], function() {
     return gulp.src('src/public/css/main.css')
         .pipe(maps.init())
-        .pipe(cleanCSS())
         .pipe(rename('main.min.css'))
         .pipe(maps.write('./'))
 		.pipe(gulp.dest('src/public/css/'));

@@ -1,168 +1,64 @@
-/*--------------------------------------------------------------*\
-  #FILM REVIEWS 
-  (STYLE SHEET ENCAPSULATES MAIN FILM REVIEWS PAGE AND SUBPAGES)
-\*--------------------------------------------------------------*/
-
-.film-reviews h1 {
-  color: rgba(181, 120, 67, 1);
-}
-
-.film-reviews h3 {
-  margin-top: 10px;
-}
-
-#filmReviewsSearch {
-  background-color: rgba(218,208,171,1);
-  margin-bottom: 15px;
-  padding-bottom: 20px;
-  padding: 20px 10px;
-   -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5);
-  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.5); 
-}
-
-#filmReviewsSearch #search input[type="text"] {
-  background-color: rgba(255, 255, 255, 0.75);
-  border: none;
-  border-bottom-left-radius: 0.5em;
-  border-top-left-radius: 0.5em;
-  display: inline-block;
-  outline: none;
-  padding: 5px 10px;
-  width: 80%;
-  webkit-box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
-  -moz-box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
-  box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
-}
-
-#filmReviewsSearch #search button[type="submit"] {
-  background-color: rgba(39,78,122,1,0);
-  border: none;
-  border-bottom-right-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-  color: rgba(255, 255, 255, 1.0);
-  display: inline-block;
-  outline: none;
-  padding: 5px 10px;
-  transition-duration: 0.3s;
-  width: 20%;
-  webkit-box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
-  -moz-box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
-  box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
-}
-
-#filmReviewsSearch #search button[type="submit"]:focus,
-#filmReviewsSearch #search button[type="submit"]:hover {
-  background-color: rgba(181, 120, 67, 1);
-}
-
-#latest-reviews-list figure {
-  background-color: rgba(218,208,171,1);
-  float: left;
-  margin-bottom: 10px;
-  margin-right: 2%;
-  min-height: 400px;
-  padding: 5px;
-  width: 48%;
-}
-
-  #latest-reviews-list figure a,
-  #latest-film-review a {
-    transition-duration: 0.3s;
-  }
-
-  #latest-reviews-list figure a:focus,
-  #latest-reviews-list figure a:hover,
-  #latest-film-review a:focus,
-  #latest-film-review a:hover {
-    color: rgba(181, 120, 67, 1);
-    text-decoration: none;
-  }
-
-  #latest-reviews-list figure a h5 {
-    margin: 10px 0 5px;
-  }
-
-  #latest-reviews-list figure p.rating-year {
-    margin-bottom: 5px;
-    text-decoration: none;
-  }
-
-#latest-film-review {
-  background-color: rgba(218,208,171,1);
-  max-height: 1000px;
-  padding: 10px;
-}
-
-  #latest-film-review p:last-of-type {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  #latest-film-review-link {
-    padding: 0
-  }
-
-  .film-reviews .article-link-read-more {
-    background-color: #dad0ab;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: right;
-  }
-
-
 /*------------------------------------*\
-  #SUBPAGES
+  #FILM REVIEWS LANDING PAGE
 \*------------------------------------*/
 
-
-/*-----------------------------*\
-  #FILM-REVIEWS-SEARCH RESULTS:
-\*-----------------------------*/
-.film-review-search-results .resultButton {
-  background: transparent;
-  border: none;
-  color: #337ab7;
-  outline: 0;
-  padding: 0;
+#film-reviews .wrapper-content .content-body .content-body-primary {
+  margin-bottom: 30px;
 }
 
-.film-review-search-results .resultButton:active,
-.film-review-search-results .resultButton:focus,
-.film-review-search-results .resultButton:hover {
-  color: black;
-}
+  #film-reviews .wrapper-content .secondary-item {
+    max-height: 500px;
+    min-height: 500px;
+  }
 
+    #film-reviews .wrapper-content .primary-item-copy-title,
+    #film-reviews .wrapper-content .secondary-item-copy-title {
+      margin-bottom: 10px;
+    }
+
+      #film-reviews .wrapper-content .rating-byline {
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+        #film-reviews .wrapper-content .rating {
+          color: rgba(153, 138, 61, 1);
+          display: block;
+          margin-right: 5px;
+        }
+
+          #film-reviews .wrapper-content .rating i {
+            margin-right: 3px;
+          }
+
+          #film-reviews .wrapper-content .rating i:last-of-type {
+            margin-right: 0;
+          }
+
+        #film-reviews .wrapper-content .byline {
+          display: block;
+          margin-left: 5px;
+        }
+        
 
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  /*.film-reviews .container {
+  #film-reviews .wrapper-content .content-body-primary .container {
+    max-width: 1400px;
     width: 100%;
-  }*/
+  } 
+
+  #film-reviews .wrapper-content .content-body-primary .row {
+    display: flex;
+  } 
 }
 
 @media (min-width: 992px) {
-  .content-parent-row {
-    margin-bottom: 30px;
-  }
-
-  #latest-reviews-list {
-    background-color: rgba(218,208,171,1);
-    padding: 10px;
-  }
-
-  #latest-reviews-list figure {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
 }
 
 @media (min-width: 1200px) {
-  
 }

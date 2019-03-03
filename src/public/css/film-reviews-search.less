@@ -1,0 +1,75 @@
+/*------------------------------------*\
+  #FILM REVIEWS SEARCH
+\*------------------------------------*/
+
+.wrapper-film-reviews-search .film-reviews-search {
+  background: rgba(218,208,171,1);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 20px 0;
+  position: relative;
+}
+
+  .wrapper-film-reviews-search .film-reviews-search-title {
+    display: block;
+    line-height: 1;
+    margin-bottom: 5px;
+    margin-left: 3px;
+  }
+
+  .wrapper-film-reviews-search .film-reviews-search #search input[type="text"] {
+    background: rgba(255, 255, 255, 1.0);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    display: inline-block;
+    height: 32px;
+    line-height: 15px;
+    outline: none;
+    padding-left: 10px;
+    vertical-align: top;
+    width: 80%;
+    webkit-box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
+    -moz-box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
+    box-shadow: inset 0 0 3px 0 rgba(153, 153, 153, 1.0);
+  }
+
+  .wrapper-film-reviews-search .film-reviews-search #search button[type="submit"] {
+    background: rgba(39,78,122,1,0);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-left: none;
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    color: rgba(255, 255, 255, 1.0);
+    display: inline-block;
+    height: 32px;
+    line-height: 16px;
+    outline: none;
+    transition-duration: 0.3s;
+    width: 20%;
+  }
+
+  .wrapper-film-reviews-search .film-reviews-search #search button[type="submit"]:focus,
+  .wrapper-film-reviews-search .film-reviews-search #search button[type="submit"]:hover {
+    background: rgba(181, 120, 67, 1);
+  }
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 768px) {
+  .wrapper-film-reviews-search .container {
+    max-width: 1400px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .wrapper-film-reviews-search .col-film-reviews-search {
+    max-width: 600px;
+    padding: 0;
+  }
+}

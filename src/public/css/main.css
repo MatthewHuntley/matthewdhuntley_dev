@@ -6765,143 +6765,178 @@ button.close {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
-/*--------------------------------------------------------------*\
-  #FILM REVIEWS 
-  (STYLE SHEET ENCAPSULATES MAIN FILM REVIEWS PAGE AND SUBPAGES)
-\*--------------------------------------------------------------*/
-.film-reviews h1 {
-  color: #b57843;
-}
-.film-reviews h3 {
-  margin-top: 10px;
-}
-#filmReviewsSearch {
-  background-color: #dad0ab;
-  margin-bottom: 15px;
-  padding-bottom: 20px;
-  padding: 20px 10px;
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
-}
-#filmReviewsSearch #search input[type="text"] {
-  background-color: rgba(255, 255, 255, 0.75);
-  border: none;
-  border-bottom-left-radius: 0.5em;
-  border-top-left-radius: 0.5em;
-  display: inline-block;
-  outline: none;
-  padding: 5px 10px;
-  width: 80%;
-  webkit-box-shadow: inset 0 0 3px 0 #999999;
-  -moz-box-shadow: inset 0 0 3px 0 #999999;
-  box-shadow: inset 0 0 3px 0 #999999;
-}
-#filmReviewsSearch #search button[type="submit"] {
-  background-color: #274e7a;
-  border: none;
-  border-bottom-right-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-  color: #ffffff;
-  display: inline-block;
-  outline: none;
-  padding: 5px 10px;
-  transition-duration: 0.3s;
-  width: 20%;
-  webkit-box-shadow: inset 0 0 3px 0 #999999;
-  -moz-box-shadow: inset 0 0 3px 0 #999999;
-  box-shadow: inset 0 0 3px 0 #999999;
-}
-#filmReviewsSearch #search button[type="submit"]:focus,
-#filmReviewsSearch #search button[type="submit"]:hover {
-  background-color: #b57843;
-}
-#latest-reviews-list figure {
-  background-color: #dad0ab;
-  float: left;
-  margin-bottom: 10px;
-  margin-right: 2%;
-  min-height: 400px;
-  padding: 5px;
-  width: 48%;
-}
-#latest-reviews-list figure a,
-#latest-film-review a {
-  transition-duration: 0.3s;
-}
-#latest-reviews-list figure a:focus,
-#latest-reviews-list figure a:hover,
-#latest-film-review a:focus,
-#latest-film-review a:hover {
-  color: #b57843;
-  text-decoration: none;
-}
-#latest-reviews-list figure a h5 {
-  margin: 10px 0 5px;
-}
-#latest-reviews-list figure p.rating-year {
-  margin-bottom: 5px;
-  text-decoration: none;
-}
-#latest-film-review {
-  background-color: #dad0ab;
-  max-height: 1000px;
-  padding: 10px;
-}
-#latest-film-review p:last-of-type {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-#latest-film-review-link {
-  padding: 0;
-}
-.film-reviews .article-link-read-more {
-  background-color: #dad0ab;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: right;
+/*------------------------------------*\
+  #FILM REVIEW INDIVIDUAL PAGE
+\*------------------------------------*/
+#film-review .wrapper-content .content-body .container {
+  max-width: 1400px;
+  width: 100%;
 }
 /*------------------------------------*\
-  #SUBPAGES
+  #MEDIA QUERIES
 \*------------------------------------*/
-/*-----------------------------*\
-  #FILM-REVIEWS-SEARCH RESULTS:
-\*-----------------------------*/
-.film-review-search-results .resultButton {
+
+/*------------------------------------*\
+  #FILM REVIEWS SEARCH RESULTS
+\*------------------------------------*/
+#film-reviews-search-results .wrapper-content .content-body .container {
+  max-width: 1400px;
+  width: 100%;
+}
+#film-reviews-search-results .wrapper-content .primary-item-title {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'MyriadProBold';
+  font-size: 1.46em;
+  margin-bottom: 18px;
+}
+/*
+  ** Result Link
+  */
+#film-reviews-search-results .film-review-search-results .resultLink-wrapper {
+  display: block;
+  font-size: 1.19em;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+#film-reviews-search-results .film-review-search-results .resultLink {
   background: transparent;
   border: none;
   color: #337ab7;
+  display: inline-block;
   outline: 0;
   padding: 0;
+  transition-duration: 0.5s;
 }
-.film-review-search-results .resultButton:active,
-.film-review-search-results .resultButton:focus,
-.film-review-search-results .resultButton:hover {
+#film-reviews-search-results .film-review-search-results .resultLink:active,
+#film-reviews-search-results .film-review-search-results .resultLink:focus,
+#film-reviews-search-results .film-review-search-results .resultLink:hover {
   color: black;
 }
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  /*.film-reviews .container {
-    width: 100%;
-  }*/
+  #film-reviews-search-results .wrapper-content .primary-item-title {
+    font-size: 1.66em;
+  }
 }
 @media (min-width: 992px) {
-  .content-parent-row {
-    margin-bottom: 30px;
+  #film-reviews-search-results .wrapper-content .primary-item-title {
+    font-size: 1.71em;
   }
-  #latest-reviews-list {
-    background-color: #dad0ab;
-    padding: 10px;
-  }
-  #latest-reviews-list figure {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+/*------------------------------------*\
+  #FILM REVIEWS SEARCH
+\*------------------------------------*/
+.wrapper-film-reviews-search .film-reviews-search {
+  background: #dad0ab;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 20px 0;
+  position: relative;
+}
+.wrapper-film-reviews-search .film-reviews-search-title {
+  display: block;
+  line-height: 1;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+.wrapper-film-reviews-search .film-reviews-search #search input[type="text"] {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-right: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  display: inline-block;
+  height: 32px;
+  line-height: 15px;
+  outline: none;
+  padding-left: 10px;
+  vertical-align: top;
+  width: 80%;
+  webkit-box-shadow: inset 0 0 3px 0 #999999;
+  -moz-box-shadow: inset 0 0 3px 0 #999999;
+  box-shadow: inset 0 0 3px 0 #999999;
+}
+.wrapper-film-reviews-search .film-reviews-search #search button[type="submit"] {
+  background: #274e7a;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-left: none;
+  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  color: #ffffff;
+  display: inline-block;
+  height: 32px;
+  line-height: 16px;
+  outline: none;
+  transition-duration: 0.3s;
+  width: 20%;
+}
+.wrapper-film-reviews-search .film-reviews-search #search button[type="submit"]:focus,
+.wrapper-film-reviews-search .film-reviews-search #search button[type="submit"]:hover {
+  background: #b57843;
+}
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 768px) {
+  .wrapper-film-reviews-search .container {
+    max-width: 1400px;
     width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper-film-reviews-search .col-film-reviews-search {
+    max-width: 600px;
+    padding: 0;
+  }
+}
+
+/*------------------------------------*\
+  #FILM REVIEWS LANDING PAGE
+\*------------------------------------*/
+#film-reviews .wrapper-content .content-body .content-body-primary {
+  margin-bottom: 30px;
+}
+#film-reviews .wrapper-content .secondary-item {
+  max-height: 500px;
+  min-height: 500px;
+}
+#film-reviews .wrapper-content .primary-item-copy-title,
+#film-reviews .wrapper-content .secondary-item-copy-title {
+  margin-bottom: 10px;
+}
+#film-reviews .wrapper-content .rating-byline {
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px;
+  position: relative;
+}
+#film-reviews .wrapper-content .rating {
+  color: #998a3d;
+  display: block;
+  margin-right: 5px;
+}
+#film-reviews .wrapper-content .rating i {
+  margin-right: 3px;
+}
+#film-reviews .wrapper-content .rating i:last-of-type {
+  margin-right: 0;
+}
+#film-reviews .wrapper-content .byline {
+  display: block;
+  margin-left: 5px;
+}
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media (min-width: 768px) {
+  #film-reviews .wrapper-content .content-body-primary .container {
+    max-width: 1400px;
+    width: 100%;
+  }
+  #film-reviews .wrapper-content .content-body-primary .row {
+    display: flex;
   }
 }
 
@@ -7043,6 +7078,10 @@ button.close {
   padding: 15px 0;
   position: relative;
 }
+.wrapper-header .container {
+  max-width: 1400px;
+  width: 100%;
+}
 .wrapper-header .header-brand {
   color: #1e211f;
   display: inline-block;
@@ -7130,15 +7169,7 @@ button.close {
     font-size: 1.15em;
   }
 }
-@media (min-width: 768px) {
-  .wrapper-header .row {
-    margin: 0;
-  }
-}
 @media (min-width: 1200px) {
-  .wrapper-header .container {
-    max-width: 1400px;
-  }
   .wrapper-header .col-sm-6 {
     padding: 0;
   }
@@ -7163,99 +7194,143 @@ button.close {
 }
 
 /*------------------------------------*\
-  #HOME PAGE
+  #INDEX/HOME PAGE
 \*------------------------------------*/
-
-
-/*------------------------------------*\
-  #MEDIA QUERIES
-\*------------------------------------*/
-
-@media only screen and (min-width : 768px) {
-	#home .wrapper-primary-content-desktop {
-		margin-bottom: 20px;
-	}  
-
-	#home .wrapper-secondary-content-desktop .row {
-		display: flex;
-	}  
-
-	#home .wrapper-secondary-content-desktop .row:first-of-type {
-		margin-bottom: 20px;
-	} 
-
-	#home .wrapper-secondary-content-desktop .content {
-    	height: 100%;
-  	}
+#home .wrapper-content .content-body {
+  display: none;
+  position: relative;
 }
-
-@media only screen and (min-width : 992px) {
+#home .wrapper-content .content-body .container {
+  width: 100%;
 }
-
-@media (min-width: 1200px) {
-  #home .home-film-reviews {
-    height: 350px;
-    overflow: hidden;
-  }
-}
-
-/*------------------------------------*\
-  #ALL INTERIOR PAGES
-\*------------------------------------*/
-/**
-* Interior page title
-*/
-/**
-* Interior page images
-*/
-.interior-page-image-container {
+#home .wrapper-content .content-body .content-body-primary {
   margin-bottom: 30px;
 }
-.interior-page-image-container img {
+#home .wrapper-content .primary-item,
+#home .wrapper-content .secondary-item {
+  padding: 15px;
+}
+#home .wrapper-content .secondary-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#home .wrapper-content .primary-item-content {
+  display: flex;
+  position: relative;
+}
+#home .wrapper-content .primary-item-copy-title,
+#home .wrapper-content .secondary-item-copy-title {
   margin-bottom: 15px;
 }
-/*------------------------------------*\
-  #ABOUT
-\*------------------------------------*/
-/*------------------------------------*\
-  #EAT
-\*------------------------------------*/
-/*------------------------------------*\
-  #EXERCISE
-\*------------------------------------*/
-/*------------------------------------*\
-  #PLAY
-\*------------------------------------*/
-/*------------------------------------*\
-  #TRAVEL
-\*------------------------------------*/
+#home .wrapper-content .primary-item-image-link {
+  margin-right: 30px;
+  width: 50%;
+}
+#home .wrapper-content .secondary-item-image-link {
+  margin-bottom: 15px;
+}
+#home .wrapper-content .primary-item-image-link img,
+#home .wrapper-content .secondary-item-image-link img {
+  display: block;
+  margin-bottom: 5px;
+}
+#home .wrapper-content .primary-item-image-link-caption,
+#home .wrapper-content .secondary-item-image-link-caption {
+  color: rgba(34, 34, 34, 0.75);
+  display: block;
+  font-size: 0.7em;
+}
+#home .wrapper-content .primary-item-copy {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+#home .wrapper-content .primary-item-copy-body,
+#home .wrapper-content .secondary-item-copy-body {
+  margin-bottom: 20px;
+}
+#home .wrapper-content .primary-item-copy-link,
+#home .wrapper-content .secondary-item-copy-link {
+  display: block;
+}
+#home .wrapper-content .primary-item-copy-link a,
+#home .wrapper-content .secondary-item-copy-link a {
+  display: inline-block;
+  text-decoration: underline;
+  transition-duration: 0.5s;
+}
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
-@media (min-width: 768px) {
-  /**
-	* Below declarations apply to all interior pages except Film Reviews
-	*/
-  .float-left {
-    float: left;
-    width: 50%;
+@media only screen and (min-width: 768px) {
+  #home .wrapper-content .content-body {
+    display: flex;
+    flex-direction: column;
   }
-  .float-right {
-    float: right;
-    width: 50%;
+  #home .wrapper-content .content-body-primary .row {
+    display: flex;
   }
-  .interior-page-image-container {
-    top: -45px;
+  #home .wrapper-content .content-body-secondary .row {
+    display: flex;
+    flex-wrap: wrap;
   }
-}
-@media (min-width: 992px) {
-  .float-left {
-    width: 33.333%;
-  }
-  .float-right {
-    width: 66.666%;
+  #home .wrapper-content .content-body-secondary .row .col-sm-6:nth-of-type(1),
+  #home .wrapper-content .content-body-secondary .row .col-sm-6:nth-of-type(2) {
+    margin-bottom: 20px;
   }
 }
+@media (min-width: 1200px) {
+  #home .wrapper-content .container {
+    max-width: 1400px;
+  }
+  #home .wrapper-content .content-body-secondary .row .col-sm-6:nth-of-type(1),
+  #home .wrapper-content .content-body-secondary .row .col-sm-6:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+}
+
+/*------------------------------------*\
+  #INTERIOR PAGE(S)
+\*------------------------------------*/
+/*
+** All Interior Pages
+*/
+.wrapper-content.interior-page .content-body {
+  height: 100%;
+}
+.wrapper-content.interior-page .content-body-primary {
+  height: 100%;
+}
+.wrapper-content.interior-page .container {
+  height: 100%;
+  max-width: 1400px;
+  width: 100%;
+}
+.wrapper-content.interior-page .row {
+  display: flex;
+  height: 100%;
+}
+.wrapper-content.interior-page [class*='col-'] {
+  flex: auto;
+}
+.wrapper-content.interior-page .secondary-item {
+  height: auto;
+}
+.wrapper-content.interior-page .primary-item-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-transform: none;
+}
+/*
+** About
+*/
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
 
 /*------------------------------------*\
   #INTRO BLOCK
@@ -7303,6 +7378,9 @@ button.close {
   font-family: 'BankGothicLight';
   margin: 0;
 }
+.wrapper-nav .container {
+  width: 100%;
+}
 .wrapper-nav .navbar-inverse {
   border: none;
 }
@@ -7311,8 +7389,8 @@ button.close {
   position: relative;
 }
 /*
-                ** Navigation Brand 
-                */
+                    ** Navigation Brand 
+                    */
 .wrapper-nav .navbar-brand {
   color: #1e211f;
   display: inline-block;
@@ -7343,8 +7421,8 @@ button.close {
   text-transform: uppercase;
 }
 /*
-                    ** Navigation Collpased Menu Button (Hamburger)
-                    */
+                        ** Navigation Collpased Menu Button (Hamburger)
+                        */
 .wrapper-nav .navbar-toggle {
   background: #1e211f;
   height: 34px;
@@ -7357,8 +7435,8 @@ button.close {
   background: #b57843;
 }
 /* 
-            * Navigation Main Bar
-            */
+                * Navigation Main Bar
+                */
 .wrapper-nav .navbar-collapse {
   background: #b57843;
 }
@@ -7384,16 +7462,16 @@ button.close {
   color: #ffffff;
 }
 /*
-                * Navigation Main Bar: Active State
-                */
+                    * Navigation Main Bar: Active State
+                    */
 .wrapper-nav .navbar #navbar .nav li.active-top,
 .wrapper-nav .navbar #navbar .nav li.active-top button,
 .wrapper-nav .navbar #navbar .nav li a.active {
   color: #ffffff;
 }
 /* 
-                        * Navigation Bar "Lifestyle" Dropdown
-                        */
+                            * Navigation Bar "Lifestyle" Dropdown
+                            */
 .wrapper-nav .dropdown {
   color: #1e211f;
   font-family: 'BankGothicLight';
@@ -7417,6 +7495,12 @@ button.close {
 .wrapper-nav .open > ul.dropdown-menu li {
   display: block;
 }
+/*Edit this/adjust for all screen sizes (currently only caters to large desktop view)*/
+/*.wrapper-nav .dropdown-menu > li > a {
+                                                  height: 35px;
+                                                  padding: 7px 20px;
+                                                  line-height: 35px;
+                                                }*/
 .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
   color: #ffffff;
   transition-duration: 0.5s;
@@ -7425,6 +7509,16 @@ button.close {
 .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus,
 .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
   background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+/*
+                                                    * Navigation Bar Dropdown Menu: Active State
+                                                    */
+.wrapper-nav .navbar #navbar .nav .dropdown-menu li.active-top,
+.wrapper-nav .navbar #navbar .nav .dropdown-menu li.active-top button,
+.wrapper-nav .navbar #navbar .nav .dropdown-menu li a.active {
+  /*Edit this/adjust for all screen sizes*/
+  /*background: rgba(255, 255, 255, 1.0);*/
   color: rgba(255, 255, 255, 0.5);
 }
 /*------------------------------------*\
@@ -7528,6 +7622,28 @@ button.close {
     font-size: 1.25em;
   }
 }
+
+/*------------------------------------*\
+  #SIDEBAR
+\*------------------------------------*/
+.wrapper-sidebar {
+  height: 100%;
+  position: relative;
+}
+.wrapper-sidebar .sidebar {
+  height: 100%;
+  position: relative;
+}
+.wrapper-sidebar .sidebar-title {
+  display: block;
+  font-family: BankGothicLight;
+  font-size: 1.125em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
 
 @charset "UTF-8";
 /* Slider */
@@ -7835,7 +7951,7 @@ button.close {
 	 * Slick Arrows
 	*/
 .wrapper-slick-carousel .slick-dots {
-  bottom: -15px;
+  bottom: 15px;
 }
 .wrapper-slick-carousel .slick-dots li {
   vertical-align: middle;
@@ -7853,7 +7969,7 @@ button.close {
  	 * Developer-implemented styles
 	*/
 .wrapper-slick-carousel .slick-carousel {
-  padding: 10px 0;
+  padding: 10px 0 30px;
   position: relative;
 }
 .wrapper-slick-carousel .article-wrapper {
@@ -7873,17 +7989,18 @@ button.close {
 }
 .wrapper-slick-carousel .slide-link {
   display: block;
-  font-family: 'MyriadProBold';
-  font-weight: 700;
-  margin-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
+  font-family: 'MyriadProRegular';
+  font-weight: 400;
+  transition-duration: 0.5s;
 }
 .wrapper-slick-carousel .slide-link:active,
 .wrapper-slick-carousel .slide-link:focus,
 .wrapper-slick-carousel .slide-link:hover {
   outline: 0;
+}
+.wrapper-slick-carousel .slide-link-image,
+.wrapper-slick-carousel .slide-link-image .wrapper-slick-carousel .slide-link-image {
+  margin-bottom: 15px;
 }
 .wrapper-slick-carousel img {
   height: auto;
@@ -7891,14 +8008,19 @@ button.close {
 }
 .wrapper-slick-carousel .slide-copy {
   display: block;
-  max-height: 250px;
-  overflow: hidden;
-  text-align: left;
+  margin-bottom: 10px;
+}
+.wrapper-slick-carousel .slide-copy a {
+  cursor: pointer;
+  text-decoration: underline;
+  text-transform: uppercase;
+  transition-duration: 0.5s;
 }
 .wrapper-slick-carousel .slide-link-read-more {
   display: block;
-  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: right;
+  text-decoration: underline;
 }
 /*------------------------------------*\
   #MEDIA QUERIES
@@ -7907,7 +8029,7 @@ button.close {
 /*------------------------------------*\
   #MAIN STYLES
 \*------------------------------------*/
-/**
+/*
  * Fonts
  */
 @font-face {
@@ -7930,15 +8052,15 @@ button.close {
   src: url('../fonts/MyriadProBold.eot');
   src: url('../fonts/MyriadProBold.eot') format('embedded-opentype'), url('../fonts/MyriadProBold.woff2') format('woff2'), url('../fonts/MyriadProBold.woff') format('woff'), url('../fonts/MyriadProBold.ttf') format('truetype'), url('../fonts/MyriadProBold.svg#MyriadProBold') format('svg');
 }
-/**
- * Body
- */
+/*
+ Body
+*/
 html,
 body {
   height: 100%;
 }
 body {
-  background-color: #274e7a;
+  background: #274e7a;
   color: #1e211f;
   display: flex;
   flex-direction: column;
@@ -7954,34 +8076,72 @@ img {
   max-width: 100%;
 }
 /**
- * Below declarations apply to all pages
- */
-.container-fluid:after {
-  clear: both;
-  content: " ";
-  display: block;
-}
-.wrapper-content {
-  flex: 1;
-  padding-bottom: 30px;
-  padding-top: 15px;
-}
-/**
  * Content
  */
-.content {
-  /*LESS! Notice: We can eventually make this a less mixin since the properties are also used for #latest-film-reviews*/
-  background-color: #ffffff;
+.wrapper-content {
+  flex: 1;
+}
+.wrapper-content .content-body {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 30px;
+  position: relative;
+}
+.wrapper-content .content-body-primary,
+.wrapper-content .content-body-secondary {
+  position: relative;
+}
+.wrapper-content .primary-item,
+.wrapper-content .secondary-item {
+  background: #ffffff;
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding: 15px 20px;
+  position: relative;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
-  padding: 10px 0;
 }
-.primary-content .content {
-  padding-bottom: 20px;
+.wrapper-content .primary-item-title,
+.wrapper-content .secondary-item-title {
+  display: block;
+  font-family: BankGothicLight;
+  font-size: 1.125em;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
 }
-.content .container {
-  width: auto;
+.wrapper-content .primary-item-content,
+.wrapper-content .secondary-item-content {
+  position: relative;
+}
+.wrapper-content .primary-item-copy,
+.wrapper-content .secondary-item-copy {
+  position: relative;
+}
+.wrapper-content .primary-item-copy-body,
+.wrapper-content .secondary-item-copy-body {
+  position: relative;
+}
+.wrapper-content .primary-item-image-link,
+.wrapper-content .secondary-item-image-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+.wrapper-content .primary-item-image,
+.wrapper-content .secondary-item-image {
+  display: block;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper-content .primary-item-copy-title,
+.wrapper-content .secondary-item-copy-title {
+  display: block;
+  font-family: BankGothicLight;
+  font-size: 1.125em;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
 }
 /**
  * Sections and Articles
@@ -8022,53 +8182,17 @@ img {
   overflow: hidden;
   text-align: left;
 }
-/**
- * Interior Pages
- */
-/**
-   * Interior page copy
-   */
-/*------------------------------------*\
-  #PAGE-SPECIFIC STYLES
-\*------------------------------------*/
-#home .wrapper-content {
-  padding-top: 0;
-}
-#home .wrapper-content-desktop {
-  display: none;
-  margin: 20px 10px;
-}
-#home .article-copy {
-  text-transform: none;
-}
-#home .article-link-read-more {
-  margin-top: 30px;
-  text-align: right;
-}
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
 @media (min-width: 768px) {
-  .container {
-    width: 100%;
-  }
   .hidden-md-up {
     display: none !important;
   }
-  /*Home Page Changes*/
-  #home .wrapper-content-desktop {
-    display: block;
-  }
-  #home .row .col-sm-6 div:first-child article .article-link-image {
-    height: 200px;
-    overflow: hidden;
-  }
 }
 @media (min-width: 1200px) {
-  /*Home Page Changes*/
-  #home-film-reviews {
-    height: 300px;
-    overflow: hidden;
+  .wrapper-content .content-body {
+    padding-bottom: 45px;
   }
 }
 
@@ -8101,6 +8225,11 @@ a.twitter-timeline:focus {
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
+@media (min-width: 768px) {
+  a.twitter-timeline {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   .twitter {
     height: 300px;

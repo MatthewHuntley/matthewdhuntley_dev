@@ -12,150 +12,172 @@
         margin: 0;
     }
 
-        .wrapper-nav .navbar-inverse {
-            border: none;
+        .wrapper-nav .container {
+            width: 100%;
         }
 
-            .wrapper-nav .navbar-header {
-                padding: 10px 0;
-                position: relative;
+            .wrapper-nav .navbar-inverse {
+                border: none;
             }
 
-                /*
-                ** Navigation Brand 
-                */
-                .wrapper-nav .navbar-brand {
-                    color: rgba(30,33,31,1.0);
-                    display: inline-block;
-                    height: auto;
-                    margin: 0 0 0 15px;
-                    padding: 0;
-                    text-align: center;
-                    transition-duration: 0.5s;
+                .wrapper-nav .navbar-header {
+                    padding: 10px 0;
+                    position: relative;
                 }
-
-                    .wrapper-nav .navbar-brand:active,
-                    .wrapper-nav .navbar-brand:focus,
-                    .wrapper-nav .navbar-brand:hover {
-                      	background: transparent;
-                        color: rgba(181,120,67,1.0);
-                    }
-
-                        .wrapper-nav .initials {
-                            display: block;
-                            font-size: 3.5em;
-                            height: 34px;
-                            letter-spacing: -0.08em;
-                            line-height: 68px;
-                        }
-
-                        .wrapper-nav .fullName {
-                            display: block;
-                            font-size: 1em;
-                            line-height: 100%;
-                            height: 16px;
-                            text-transform: uppercase;
-                        }
 
                     /*
-                    ** Navigation Collpased Menu Button (Hamburger)
+                    ** Navigation Brand 
                     */
-                    .wrapper-nav .navbar-toggle {
-                        background: rgba(30,33,31,1.0);
-                        height: 34px;
-                        margin: 0 15px 0 0;
-                        transition-duration: 0.5s;
-                    }
-
-                    .wrapper-nav .navbar-toggle:active, 
-                    .wrapper-nav .navbar-toggle:focus, 
-                    .wrapper-nav .navbar-toggle:hover {
-                        background: rgba(181,120,67,1.0);
-                    }
-
-            /* 
-            * Navigation Main Bar
-            */
-            .wrapper-nav .navbar-collapse {
-                background: rgba(181,120,67,1.0);
-            }
-
-                .wrapper-nav .navbar-collapse .navbar-nav > li {
-                    display: block;
-                    float: none;
-                    padding: 0px;
-                    text-transform: uppercase;
-                }
-
-                    .wrapper-nav .navbar-inverse .navbar-nav > li > a {
-                        color: rgba(30, 33, 31, 1.0);
+                    .wrapper-nav .navbar-brand {
+                        color: rgba(30,33,31,1.0);
+                        display: inline-block;
                         height: auto;
-                        line-height: 25px;
-                        padding: 10px 15px;
+                        margin: 0 0 0 15px;
+                        padding: 0;
+                        text-align: center;
                         transition-duration: 0.5s;
                     }
 
-                        .wrapper-nav .navbar-inverse .navbar-nav > li > a i {
-                            vertical-align: top;
+                        .wrapper-nav .navbar-brand:active,
+                        .wrapper-nav .navbar-brand:focus,
+                        .wrapper-nav .navbar-brand:hover {
+                          	background: transparent;
+                            color: rgba(181,120,67,1.0);
                         }
 
-                    .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:active,
-                    .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus,
-                    .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover {
-                        color: rgba(255, 255, 255, 1.0);
-                    }
+                            .wrapper-nav .initials {
+                                display: block;
+                                font-size: 3.5em;
+                                height: 34px;
+                                letter-spacing: -0.08em;
+                                line-height: 68px;
+                            }
 
-                /*
-                * Navigation Main Bar: Active State
+                            .wrapper-nav .fullName {
+                                display: block;
+                                font-size: 1em;
+                                line-height: 100%;
+                                height: 16px;
+                                text-transform: uppercase;
+                            }
+
+                        /*
+                        ** Navigation Collpased Menu Button (Hamburger)
+                        */
+                        .wrapper-nav .navbar-toggle {
+                            background: rgba(30,33,31,1.0);
+                            height: 34px;
+                            margin: 0 15px 0 0;
+                            transition-duration: 0.5s;
+                        }
+
+                        .wrapper-nav .navbar-toggle:active, 
+                        .wrapper-nav .navbar-toggle:focus, 
+                        .wrapper-nav .navbar-toggle:hover {
+                            background: rgba(181,120,67,1.0);
+                        }
+
+                /* 
+                * Navigation Main Bar
                 */
-                .wrapper-nav .navbar #navbar .nav li.active-top,
-                .wrapper-nav .navbar #navbar .nav li.active-top button,
-                .wrapper-nav .navbar #navbar .nav li a.active {
-                    color: rgba(255, 255, 255, 1.0);
+                .wrapper-nav .navbar-collapse {
+                    background: rgba(181,120,67,1.0);
                 }
 
-                        /* 
-                        * Navigation Bar "Lifestyle" Dropdown
-                        */
-                        .wrapper-nav .dropdown {
+                    .wrapper-nav .navbar-collapse .navbar-nav > li {
+                        display: block;
+                        float: none;
+                        padding: 0px;
+                        text-transform: uppercase;
+                    }
+
+                        .wrapper-nav .navbar-inverse .navbar-nav > li > a {
                             color: rgba(30, 33, 31, 1.0);
-                            font-family: 'BankGothicLight';
-                            line-height: 100%;
+                            height: auto;
+                            line-height: 25px;
                             padding: 10px 15px;
                             transition-duration: 0.5s;
                         }
 
-                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a, 
-                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a:active, 
-                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a:focus, 
-                                .wrapper-nav .navbar-inverse .navbar-nav > .open > a:hover {
-                                    background: rgba(30,33,31,1.0);
-                                    color: rgba(255, 255, 255, 1.0);
-                                }
+                            .wrapper-nav .navbar-inverse .navbar-nav > li > a i {
+                                vertical-align: top;
+                            }
 
-                                    .wrapper-nav .dropdown-menu {
-                                        font-size: 1em;
-                                    }
+                        .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:active,
+                        .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:focus,
+                        .wrapper-nav .navbar-inverse .navbar-collapse .navbar-nav > li > a:hover {
+                            color: rgba(255, 255, 255, 1.0);
+                        }
 
-                                    .wrapper-nav .open > ul.dropdown-menu {
+                    /*
+                    * Navigation Main Bar: Active State
+                    */
+                    .wrapper-nav .navbar #navbar .nav li.active-top,
+                    .wrapper-nav .navbar #navbar .nav li.active-top button,
+                    .wrapper-nav .navbar #navbar .nav li a.active {
+                        color: rgba(255, 255, 255, 1.0);
+                    }
+
+                            /* 
+                            * Navigation Bar "Lifestyle" Dropdown
+                            */
+                            .wrapper-nav .dropdown {
+                                color: rgba(30, 33, 31, 1.0);
+                                font-family: 'BankGothicLight';
+                                line-height: 100%;
+                                padding: 10px 15px;
+                                transition-duration: 0.5s;
+                            }
+
+                                    .wrapper-nav .navbar-inverse .navbar-nav > .open > a, 
+                                    .wrapper-nav .navbar-inverse .navbar-nav > .open > a:active, 
+                                    .wrapper-nav .navbar-inverse .navbar-nav > .open > a:focus, 
+                                    .wrapper-nav .navbar-inverse .navbar-nav > .open > a:hover {
                                         background: rgba(30,33,31,1.0);
+                                        color: rgba(255, 255, 255, 1.0);
                                     }
 
-                                        .wrapper-nav .open > ul.dropdown-menu li {
-                                            display: block
+                                        .wrapper-nav .dropdown-menu {
+                                            font-size: 1em;
                                         }
 
-                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-                                                color: rgba(255, 255, 255, 1.0);
-                                                transition-duration: 0.5s;
+                                        .wrapper-nav .open > ul.dropdown-menu {
+                                            background: rgba(30,33,31,1.0);
+                                        }
+
+                                            .wrapper-nav .open > ul.dropdown-menu li {
+                                                display: block
                                             }
 
-                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:active,
-                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus,
-                                            .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
-                                                background: transparent;
-                                                color: rgba(255, 255, 255, 0.5);
-                                            }
+                                                /*Edit this/adjust for all screen sizes (currently only caters to large desktop view)*/
+                                                /*.wrapper-nav .dropdown-menu > li > a {
+                                                  height: 35px;
+                                                  padding: 7px 20px;
+                                                  line-height: 35px;
+                                                }*/
+
+                                                    .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+                                                        color: rgba(255, 255, 255, 1.0);
+                                                        transition-duration: 0.5s;
+                                                    }
+
+                                                    .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:active,
+                                                    .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus,
+                                                    .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+                                                        background: transparent;
+                                                        color: rgba(255, 255, 255, 0.5);
+                                                    }
+
+                                                    /*
+                                                    * Navigation Bar Dropdown Menu: Active State
+                                                    */
+                                                    .wrapper-nav .navbar #navbar .nav .dropdown-menu li.active-top,
+                                                    .wrapper-nav .navbar #navbar .nav .dropdown-menu li.active-top button,
+                                                    .wrapper-nav .navbar #navbar .nav .dropdown-menu li a.active {
+                                                        /*Edit this/adjust for all screen sizes*/
+                                                        /*background: rgba(255, 255, 255, 1.0);*/
+                                                        color: rgba(255, 255, 255, 0.5);
+                                                    }
 
 /*------------------------------------*\
   #MEDIA QUERIES

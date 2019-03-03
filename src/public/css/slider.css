@@ -33,7 +33,7 @@
 	 * Slick Arrows
 	*/
 .wrapper-slick-carousel .slick-dots {
-  bottom: -15px;
+  bottom: 15px;
 }
 .wrapper-slick-carousel .slick-dots li {
   vertical-align: middle;
@@ -51,7 +51,7 @@
  	 * Developer-implemented styles
 	*/
 .wrapper-slick-carousel .slick-carousel {
-  padding: 10px 0;
+  padding: 10px 0 30px;
   position: relative;
 }
 .wrapper-slick-carousel .article-wrapper {
@@ -71,17 +71,18 @@
 }
 .wrapper-slick-carousel .slide-link {
   display: block;
-  font-family: 'MyriadProBold';
-  font-weight: 700;
-  margin-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
+  font-family: 'MyriadProRegular';
+  font-weight: 400;
+  transition-duration: 0.5s;
 }
 .wrapper-slick-carousel .slide-link:active,
 .wrapper-slick-carousel .slide-link:focus,
 .wrapper-slick-carousel .slide-link:hover {
   outline: 0;
+}
+.wrapper-slick-carousel .slide-link-image,
+.wrapper-slick-carousel .slide-link-image .wrapper-slick-carousel .slide-link-image {
+  margin-bottom: 15px;
 }
 .wrapper-slick-carousel img {
   height: auto;
@@ -89,14 +90,19 @@
 }
 .wrapper-slick-carousel .slide-copy {
   display: block;
-  max-height: 250px;
-  overflow: hidden;
-  text-align: left;
+  margin-bottom: 10px;
+}
+.wrapper-slick-carousel .slide-copy a {
+  cursor: pointer;
+  text-decoration: underline;
+  text-transform: uppercase;
+  transition-duration: 0.5s;
 }
 .wrapper-slick-carousel .slide-link-read-more {
   display: block;
-  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: right;
+  text-decoration: underline;
 }
 /*------------------------------------*\
   #MEDIA QUERIES

@@ -1,0 +1,10 @@
+/*------------------------------------*\
+  #FILM REVIEW INDIVIDUAL PAGE
+\*------------------------------------*/
+#film-review .wrapper-content .content-body .container {
+  max-width: 1400px;
+  width: 100%;
+}
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/

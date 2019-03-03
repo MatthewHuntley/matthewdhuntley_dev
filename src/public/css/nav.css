@@ -9,6 +9,9 @@
   font-family: 'BankGothicLight';
   margin: 0;
 }
+.wrapper-nav .container {
+  width: 100%;
+}
 .wrapper-nav .navbar-inverse {
   border: none;
 }
@@ -17,8 +20,8 @@
   position: relative;
 }
 /*
-                ** Navigation Brand 
-                */
+                    ** Navigation Brand 
+                    */
 .wrapper-nav .navbar-brand {
   color: #1e211f;
   display: inline-block;
@@ -49,8 +52,8 @@
   text-transform: uppercase;
 }
 /*
-                    ** Navigation Collpased Menu Button (Hamburger)
-                    */
+                        ** Navigation Collpased Menu Button (Hamburger)
+                        */
 .wrapper-nav .navbar-toggle {
   background: #1e211f;
   height: 34px;
@@ -63,8 +66,8 @@
   background: #b57843;
 }
 /* 
-            * Navigation Main Bar
-            */
+                * Navigation Main Bar
+                */
 .wrapper-nav .navbar-collapse {
   background: #b57843;
 }
@@ -90,16 +93,16 @@
   color: #ffffff;
 }
 /*
-                * Navigation Main Bar: Active State
-                */
+                    * Navigation Main Bar: Active State
+                    */
 .wrapper-nav .navbar #navbar .nav li.active-top,
 .wrapper-nav .navbar #navbar .nav li.active-top button,
 .wrapper-nav .navbar #navbar .nav li a.active {
   color: #ffffff;
 }
 /* 
-                        * Navigation Bar "Lifestyle" Dropdown
-                        */
+                            * Navigation Bar "Lifestyle" Dropdown
+                            */
 .wrapper-nav .dropdown {
   color: #1e211f;
   font-family: 'BankGothicLight';
@@ -123,6 +126,12 @@
 .wrapper-nav .open > ul.dropdown-menu li {
   display: block;
 }
+/*Edit this/adjust for all screen sizes (currently only caters to large desktop view)*/
+/*.wrapper-nav .dropdown-menu > li > a {
+                                                  height: 35px;
+                                                  padding: 7px 20px;
+                                                  line-height: 35px;
+                                                }*/
 .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
   color: #ffffff;
   transition-duration: 0.5s;
@@ -131,6 +140,16 @@
 .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus,
 .wrapper-nav .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
   background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+/*
+                                                    * Navigation Bar Dropdown Menu: Active State
+                                                    */
+.wrapper-nav .navbar #navbar .nav .dropdown-menu li.active-top,
+.wrapper-nav .navbar #navbar .nav .dropdown-menu li.active-top button,
+.wrapper-nav .navbar #navbar .nav .dropdown-menu li a.active {
+  /*Edit this/adjust for all screen sizes*/
+  /*background: rgba(255, 255, 255, 1.0);*/
   color: rgba(255, 255, 255, 0.5);
 }
 /*------------------------------------*\

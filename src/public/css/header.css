@@ -11,6 +11,10 @@
   padding: 15px 0;
   position: relative;
 }
+.wrapper-header .container {
+  max-width: 1400px;
+  width: 100%;
+}
 .wrapper-header .header-brand {
   color: #1e211f;
   display: inline-block;
@@ -98,15 +102,7 @@
     font-size: 1.15em;
   }
 }
-@media (min-width: 768px) {
-  .wrapper-header .row {
-    margin: 0;
-  }
-}
 @media (min-width: 1200px) {
-  .wrapper-header .container {
-    max-width: 1400px;
-  }
   .wrapper-header .col-sm-6 {
     padding: 0;
   }
