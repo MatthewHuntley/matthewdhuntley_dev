@@ -48,6 +48,12 @@ img {
   max-width: 100%;
 }
 /**
+ * Helper Classes
+ */
+.text-italic {
+  font-style: italic;
+}
+/**
  * Content
  */
 .wrapper-content {
