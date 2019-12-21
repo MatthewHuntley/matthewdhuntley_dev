@@ -1,0 +1,28 @@
+extends ./layout.jade
+
+block content
+  div.wrapper-content.interior-page
+    div.content-body
+      div.content-body-primary
+        div.container
+          div.row
+            div.col-sm-8
+              div.primary-item
+                span.primary-item-title Exercise
+                div.primary-item-content
+                  div.primary-item-copy
+                    div.primary-item-copy-body
+                      p Believe it or not, the human body was meant to move, and given our mostly sedentary lifestyles, it can unfortunately takes us a long time to realize something so practical (it took me roughty 27 years). But I&#8217;ve since found (and continue to find) that simply moving the body as it was meant to be moved can be a wonderfully joyous and beautiful thing, and it&#8217;s never too too late to put your muscles to work. Plus, the more diverse the work, the more rewarding it is.
+                      p So if you&#8217;re looking to add some flavor and diversity to your day, check out this latest and greatest excercise I happen to come across that has shaken up my otherwise idle routine.
+                      span.primary-item-copy-title Latest Exercise
+                      p A challenging, non&#45;stop HIIT cardio and abs workout from Kelli and Daniel at 
+                        a(href='https://www.fitnessblender.com/' target="_blank") Fitness Blender
+                        |. 
+                        br
+                        | Be prepared to work, sweat and get lean. But above all else, enjoy!
+                      div.exercise-video
+                        div.embed-responsive.embed-responsive-16by9
+                          iframe(class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/s3zAG4zvVpc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            div.hidden-xs.col-sm-4
+              div.secondary-item
+                include ./partials/_sidebar.jade
