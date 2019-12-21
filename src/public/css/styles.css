@@ -50,6 +50,10 @@ img {
 /**
  * Helper Classes
  */
+.text-bold {
+  font-family: 'MyriadProBold';
+  font-weight: 700;
+}
 .text-italic {
   font-style: italic;
 }

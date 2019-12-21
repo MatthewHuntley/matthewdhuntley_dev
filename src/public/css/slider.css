@@ -4,24 +4,30 @@
 .wrapper-slick-carousel {
   position: relative;
 }
-/**
- 	 * slick-theme.css overrides
+/*
+ 	 * slick-theme.css and slick.css overrides and additions
 	*/
-/**
+/*
+	 * Center slide
+	*/
+.wrapper-slick-carousel .slick-track {
+  margin: 0 auto;
+}
+/*
 	 * Inherent class from slick.css representing each slide; exists on same level as author-implemented id
 	*/
 .wrapper-slick-carousel .slick-slide {
   margin-bottom: 12px;
   width: 100%;
 }
-/**
+/*
 	 * Remove default dotted outline
 	*/
 .wrapper-slick-carousel .slick-slide:active,
 .wrapper-slick-carousel .slick-slide:focus {
   outline: 0;
 }
-/**
+/*
 	 * Slick Arrows
 	*/
 .wrapper-slick-carousel .slick-arrow,
@@ -29,7 +35,7 @@
 .wrapper-slick-carousel .slick-prev {
   display: none !important;
 }
-/**
+/*
 	 * Slick Arrows
 	*/
 .wrapper-slick-carousel .slick-dots {
@@ -41,13 +47,13 @@
 .wrapper-slick-carousel .slick-dots li button::before {
   color: #ffffff;
   font-size: 50px;
-  opacity: 1.0;
+  opacity: 1;
 }
 .wrapper-slick-carousel .slick-dots li.slick-active button::before {
   color: #b57843;
-  opacity: 1.0;
+  opacity: 1;
 }
-/**
+/*
  	 * Developer-implemented styles
 	*/
 .wrapper-slick-carousel .slick-carousel {
@@ -66,27 +72,25 @@
   display: block;
   font-family: 'BankGothicLight';
   font-weight: 500;
+  font-size: 0.95em;
   text-align: left;
   text-transform: uppercase;
 }
-.wrapper-slick-carousel .slide-link {
-  display: block;
-  font-family: 'MyriadProRegular';
-  font-weight: 400;
-  transition-duration: 0.5s;
-}
-.wrapper-slick-carousel .slide-link:active,
-.wrapper-slick-carousel .slide-link:focus,
-.wrapper-slick-carousel .slide-link:hover {
-  outline: 0;
-}
-.wrapper-slick-carousel .slide-link-image,
-.wrapper-slick-carousel .slide-link-image .wrapper-slick-carousel .slide-link-image {
+.wrapper-slick-carousel .slide-link-image {
   margin-bottom: 15px;
+}
+.wrapper-slick-carousel .slide-link-image a {
+  display: block;
+  transition-duration: 0.5s;
 }
 .wrapper-slick-carousel img {
   height: auto;
   width: 100%;
+}
+.wrapper-slick-carousel .slide-link-image a:active,
+.wrapper-slick-carousel .slide-link-image a:focus,
+.wrapper-slick-carousel .slide-link-image a:hover {
+  outline: 0;
 }
 .wrapper-slick-carousel .slide-copy {
   display: block;
@@ -100,8 +104,14 @@
 }
 .wrapper-slick-carousel .slide-link-read-more {
   display: block;
+  font-family: 'MyriadProRegular';
+  font-weight: 400;
   margin-bottom: 15px;
   text-align: right;
+  transition-duration: 0.5s;
+}
+.wrapper-slick-carousel .slide-link-read-more a {
+  display: inline-block;
   text-decoration: underline;
 }
 /*------------------------------------*\

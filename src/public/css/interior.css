@@ -7,6 +7,10 @@
 /*
 ** General Styles
 */
+.wrapper-content.interior-page p {
+  font-size: 17px;
+  line-height: 1.6;
+}
 .wrapper-content.interior-page a {
   display: inline-block;
   text-decoration: none;
@@ -52,9 +56,119 @@
 .wrapper-content.interior-page .primary-item-copy-title {
   margin: 20px 0 5px;
 }
+/*------------------------------------*\
+  #PAGE SPECIFIC STYLES
+\*------------------------------------*/
 /*
 ** About
 */
+/*
+** Exercise
+*/
+#exercise .wrapper-content.interior-page .primary-item-copy-title {
+  margin-bottom: 6px;
+}
+#exercise .exercise-video {
+  margin-bottom: 10px;
+  position: relative;
+}
+/*
+** Eat
+*/
+#eat .primary-item-copy-image-wrapper {
+  display: flex;
+  position: relative;
+}
+#eat .primary-item-copy-image-wrapper .copy-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+#eat .primary-item-copy-image-wrapper:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+/*
+** Travel
+*/
+#travel .primary-item-copy-image-wrapper {
+  display: flex;
+  min-height: 450px;
+  position: relative;
+}
+#travel .primary-item-copy-image-wrapper .copy-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+/*
+** Leisure
+*/
+#leisure .primary-item-copy-image-wrapper {
+  display: flex;
+  position: relative;
+}
+#leisure .primary-item-copy-image-wrapper:nth-of-type(1) {
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+#leisure .primary-item-copy-image-wrapper:nth-of-type(2) {
+  padding-bottom: 12px;
+}
+#leisure .primary-item-copy-image-wrapper:nth-of-type(1) .copy-wrapper {
+  width: 100%;
+}
+#leisure .primary-item-copy-image-wrapper .copy-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+#leisure .primary-item-copy-image-wrapper .image-wrapper {
+  width: 100%;
+}
+#leisure .primary-item-copy-image-wrapper:nth-of-type(1) .image-wrapper {
+  margin-bottom: 15px;
+}
 /*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
+@media (min-width: 992px) {
+  /*
+	** Eat
+	*/
+  #eat .primary-item-copy-image-wrapper .copy-wrapper {
+    width: 47%;
+  }
+  #eat .primary-item-copy-image-wrapper .image-wrapper {
+    margin-left: auto;
+    width: 47%;
+  }
+  #eat .primary-item-copy-image-wrapper:nth-of-type(1) {
+    margin-bottom: 30px;
+  }
+  #eat .primary-item-copy-image-wrapper .image-wrapper.recipe {
+    background: url('/static/images/interior-pages/eat/recipe-black-bean-dip.jpg') 50% 0 no-repeat;
+    background-size: cover;
+  }
+  #eat .primary-item-copy-image-wrapper .image-wrapper.restaurant {
+    background: url('/static/images/interior-pages/eat/restaurant-faryab-afghan-cuisine.jpg') 0 50% no-repeat;
+    background-size: cover;
+  }
+  /*
+	** Travel
+	*/
+  #travel .primary-item-copy-image-wrapper .copy-wrapper {
+    width: 47%;
+  }
+  #travel .primary-item-copy-image-wrapper .image-wrapper {
+    background: url('/static/images/interior-pages/travel/travel-st-georges-castle.jpg') 50% 0 no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    width: 47%;
+  }
+  /*
+	** Leisure
+	*/
+  #leisure .primary-item-copy-image-wrapper:nth-of-type(2) .copy-wrapper {
+    width: 47%;
+  }
+  #leisure .primary-item-copy-image-wrapper:nth-of-type(2) .image-wrapper {
+    background: url('/static/images/interior-pages/leisure/leisure-national-building-museum-exterior.jpg') 50% 30% no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    width: 47%;
+  }
+}

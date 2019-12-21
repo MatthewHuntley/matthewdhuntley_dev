@@ -94,7 +94,7 @@ views.forEach(function(value, index) {
 		res.locals.path = path; 
 
 		if((value=="film-reviews" || value=="film-reviews/film-review") && req.query.search) {
-			console.log(req.query.search);
+			//console.log(req.query.search);
 			var myString = 'SELECT * FROM film_reviews WHERE title LIKE "%'+req.query.search+'%"';
 			//console.log("mystring = "+myString);
 			//console.log(typeof myString);
@@ -139,6 +139,7 @@ app.post('/film-reviews/film-review', function(req,res){
 	//console.log(req.body);
 	//console.log(req.body.title);
 	//console.log(req.body.review);
+	//console.log(req.body.image);
 	res.render('film-reviews/film-review', {id: 'film-review', resultsKey : req.body});
 });
 
