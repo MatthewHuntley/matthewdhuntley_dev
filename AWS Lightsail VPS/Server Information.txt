@@ -1,0 +1,6 @@
+Amazon Lightsail Server
+
+LAMP Instances
+Name: LAMP_PHP_7-1 
+Password: zDKqh2iE4NLc
+Apache version: Apache/2.4.41 (Unix)
