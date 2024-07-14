@@ -2,4 +2,4 @@
 
 matthewdhuntley_dev GitHub Repository
 
-A website about and developed by Matthew D. Huntley, focused primarily on film reviews.
+A website about and developed by Matthew D. Huntley.
